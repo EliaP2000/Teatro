@@ -1,0 +1,32 @@
+<h1>Teatro</h1>
+<br />
+<div class="divEntry" [style]="visibility:visibile">
+  <input id="key" #key type="text" />
+  <button id="bottoneKey" (click)="EntryDatabase(key.value)">Inserisci</button>
+  <p id="output"></p>
+  <br />
+</div>
+
+<div style="visibility:hidden" class="divInserimento">
+  <p>Scrivi il tuo nome, premi il pulsante prenota e clicca il posto che vuoi</p>
+  <br />
+  <input id="data" #data type="text" />
+  <button id="bottonePrenota" (click)="showTeatro(data.value)">Prenota</button>
+</div>
+
+<div style="visibility:hidden" class="divTeatro" >
+  <button id="BottoneB">Mostra Teatro</button>
+
+  <p>
+    <button *ngFor="let platea of bottoni; let counter = index" style="background-color:green">
+      <p (click)="selezionaPostoPlatea(data.value, counter)"
+      >{{ platea }}</p>
+    </button>
+  </p>
+  <p>
+    <button *ngFor="let palchi of bottoni1; let counter = index" style="background-color:green">
+      <p (click)="selezionaPostoPalchi(data.value, counter)"
+      >{{ palchi }}</p>
+    </button>
+  </p>
+</div>
