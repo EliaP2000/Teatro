@@ -16,6 +16,9 @@ var BloccoTeatro = Array.from(
     'divTeatro'
   ) as unknown as HTMLCollectionOf<HTMLElement>
 );
+var w = Array.from(
+  document.getElementsByClassName('divEntry') as unknown as HTMLCollectionOf<HTMLElement>
+);
 
 @Component({
   selector: 'my-app',
@@ -63,9 +66,6 @@ export class AppComponent {
   }
 
   EntryDatabase(key: string) {
-    var w = Array.from(
-      document.getElementsByClassName('divEntry') as unknown as HTMLCollectionOf<HTMLElement>
-    );
     for (var j = 0; j < w.length; j++) {
       if (key == '6a435159') {
         document.getElementById('output').innerHTML = 'chiave corretta';
@@ -85,11 +85,11 @@ export class AppComponent {
       } else {
         document.getElementById('output').innerHTML = 'chiave errata';
       }
-      return (BloccoInserimento[j].style.visibility = 'visibile');
     }
   }
 
   showTeatro(nomeInserito: any) {
+    if()
     if (nomeInserito != null) {
       for (var j = 0; j < BloccoInserimento.length; j++) {
         BloccoInserimento[j].style.visibility = 'hidden';
