@@ -89,21 +89,14 @@ export class AppComponent {
   }
 
   showTeatro(nomeInserito: any) {
-    if()
-    if (nomeInserito != null) {
+    //if (nomeInserito != null) {
       for (var j = 0; j < BloccoInserimento.length; j++) {
-        BloccoInserimento[j].style.visibility = 'hidden';
-        BloccoTeatro[j].style.visibility = 'visibile';
-        return BloccoInserimento || BloccoTeatro;
+        if(w[j].style.visibility == "hidden"){
+          BloccoInserimento[j].style.visibility = 'visibile';
+        }
       }
-    } else {
-      for (var j = 0; j < BloccoInserimento.length; j++) {
-        BloccoInserimento[j].style.visibility = 'visible';
-        BloccoTeatro[j].style.visibility = 'hidden';
-        return BloccoInserimento || BloccoTeatro;
-      }
+      return BloccoInserimento;
     }
-  }
 }
 
 var plateaPrenotazione = new AppComponent();
