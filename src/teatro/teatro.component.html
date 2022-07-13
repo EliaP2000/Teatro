@@ -1,0 +1,16 @@
+<div style="visibility:hidden" class="divTeatro" >
+<button id="BottoneB">Mostra Teatro</button>
+
+<p>
+  <button *ngFor="let platea of bottoni; let counter = index" style="background-color:green">
+    <p (click)="selezionaPostoPlatea(data.value, counter)"
+    >{{ platea }}</p>
+  </button>
+</p>
+<p>
+  <button *ngFor="let palchi of bottoni1; let counter = index" style="background-color:green">
+    <p (click)="selezionaPostoPalchi(data.value, counter)"
+    >{{ palchi }}</p>
+  </button>
+</p>
+</div>
