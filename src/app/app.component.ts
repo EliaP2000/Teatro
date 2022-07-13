@@ -82,7 +82,6 @@ export class AppComponent {
           },
           error: (err: AjaxError) => console.error(err.response),
         });
-        BloccoInserimento[j].style.visibility = 'visible';
       } else {
         document.getElementById('output').innerHTML = 'chiave errata';
       }
