@@ -99,21 +99,3 @@ export class AppComponent {
     }
   }
 }
-
-var plateaPrenotazione = new AppComponent();
-var palchiPrenotazione = new AppComponent();
-var Numplatea: any;
-var Numpalchi: any;
-var info: string;
-var nomeInserito: any;
-var key: string;
-
-function EntryDatabase(key: string,string: any) {
-throw new Error('Function not implemented.');
-}
-
-function showTeatro(nomeInserito: any,any: any) {
-throw new Error('Function not implemented.');
-}
-/*far restituire a Database un return create element con un bottone e successivamente collegarci le varie parti
-altrimenti controllare cosa non funzioni nel togliere l'array w dalla funzione database e renderla una variabile globale*/
