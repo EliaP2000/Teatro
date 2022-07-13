@@ -57,7 +57,6 @@ export class AppComponent {
       }
     }
   }
-}
   EntryDatabase(key: string) {
     var w = Array.from(
       document.getElementsByClassName('divEntry') as unknown as HTMLCollectionOf<HTMLElement>
