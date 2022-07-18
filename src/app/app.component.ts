@@ -70,4 +70,7 @@ export class AppComponent {
       document.getElementById('output').innerHTML = 'chiave errata';
     }
   }
+  clean() {
+    this.divInserimento=undefined;
+  }
 }
