@@ -65,7 +65,7 @@ export class AppComponent {
     for (var j = 0; j < w.length; j++) {
       if (key == '6a435159') {
         document.getElementById('output').innerHTML = 'chiave corretta';
-        w[j].style.visibility = 'hidden';
+        this.selezionata = key;
         const obs = ajax({
           method: 'POST',
           url: URL + '/set?key=' + key,
@@ -98,8 +98,5 @@ export class AppComponent {
         return BloccoInserimento || BloccoTeatro;
       }
     }
-  }
-  seleziona(name: string) {
-    this.selezionata = name;
   }
 }
