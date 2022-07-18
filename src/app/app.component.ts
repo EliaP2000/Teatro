@@ -102,7 +102,4 @@ export class AppComponent {
   seleziona(name: string) {
     this.selezionata = name;
   }
-  clean() {
-    this.selezionata=undefined;
-  }
 }
