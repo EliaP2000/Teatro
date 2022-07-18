@@ -28,6 +28,7 @@ export class AppComponent {
   public style: CSSStyleDeclaration;
   bottoni = [];
   bottoni1 = [];
+  selezionata: string;
 
   constructor() {
     this.bottoni = Array(70)
@@ -97,5 +98,11 @@ export class AppComponent {
         return BloccoInserimento || BloccoTeatro;
       }
     }
+  }
+  seleziona(name: string) {
+    this.selezionata = name;
+  }
+  clean() {
+    this.selezionata=undefined;
   }
 }
