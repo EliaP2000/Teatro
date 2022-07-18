@@ -70,20 +70,4 @@ export class AppComponent {
       document.getElementById('output').innerHTML = 'chiave errata';
     }
   }
-
-  showTeatro(nomeInserito: any) {
-    if (nomeInserito != null) {
-      for (var j = 0; j < BloccoInserimento.length; j++) {
-        BloccoInserimento[j].style.visibility = 'hidden';
-        BloccoTeatro[j].style.visibility = 'visibile';
-        return BloccoInserimento || BloccoTeatro;
-      }
-    } else {
-      for (var j = 0; j < BloccoInserimento.length; j++) {
-        BloccoInserimento[j].style.visibility = 'visible';
-        BloccoTeatro[j].style.visibility = 'hidden';
-        return BloccoInserimento || BloccoTeatro;
-      }
-    }
-  }
 }
