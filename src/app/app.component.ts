@@ -59,28 +59,23 @@ export class AppComponent {
     }
   }
   EntryDatabase(key: string) {
-    var w = Array.from(
-      document.getElementsByClassName('divEntry') as unknown as HTMLCollectionOf<HTMLElement>
-    );
-    for (var j = 0; j < w.length; j++) {
-      if (key == '6a435159') {
-        document.getElementById('output').innerHTML = 'chiave corretta';
-        this.selezionata = key;
-        const obs = ajax({
-          method: 'POST',
-          url: URL + '/set?key=' + key,
-          crossDomain: true,
-          //body: document.getElementById('data').value
-        });
-        obs.subscribe({
-          next: (res: AjaxResponse<any>) => {
-            document.getElementById('output').innerHTML = 'Ok!'; //response se il nuovo valore venisse settato
-          },
-          error: (err: AjaxError) => console.error(err.response),
-        });
-      } else {
-        document.getElementById('output').innerHTML = 'chiave errata';
-      }
+    if (key == '6a435159') {
+      document.getElementById('output').innerHTML = 'chiave corretta';
+      this.selezionata = key;
+      const obs = ajax({
+        method: 'POST',
+        url: URL + '/set?key=' + key,
+        crossDomain: true,
+        //body: document.getElementById('data').value
+      });
+      obs.subscribe({
+        next: (res: AjaxResponse<any>) => {
+          document.getElementById('output').innerHTML = 'Ok!'; //response se il nuovo valore venisse settato
+        },
+        error: (err: AjaxError) => console.error(err.response),
+      });
+    } else {
+      document.getElementById('output').innerHTML = 'chiave errata';
     }
   }
 
