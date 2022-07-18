@@ -10,7 +10,7 @@
   <p>Scrivi il tuo nome, premi il pulsante prenota e clicca il posto che vuoi</p>
   <br />
   <input id="data" #data type="text" />
-  <button id="bottonePrenota" (click)="showTeatro(data.value)">Prenota</button>
+  <button id="bottonePrenota" (click)="clean()">Prenota</button>
 </div>
 
 <div *ngIf="divTeatro !== undefined">
