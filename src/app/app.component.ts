@@ -6,16 +6,6 @@ console.log(info)*/
 
 const URL: string =
   'https://eu-central-1.aws.data.mongodb-api.com/app/kvaas-giwjg/endpoint';
-var BloccoInserimento = Array.from(
-  document.getElementsByClassName(
-    'divInserimento'
-  ) as unknown as HTMLCollectionOf<HTMLElement>
-);
-var BloccoTeatro = Array.from(
-  document.getElementsByClassName(
-    'divTeatro'
-  ) as unknown as HTMLCollectionOf<HTMLElement>
-);
 
 @Component({
   selector: 'my-app',
@@ -28,7 +18,9 @@ export class AppComponent {
   public style: CSSStyleDeclaration;
   bottoni = [];
   bottoni1 = [];
-  selezionata: string;
+  divLogin: string;
+  divInserimento: string;
+  divTeatro: string;
 
   constructor() {
     this.bottoni = Array(70)
@@ -61,7 +53,7 @@ export class AppComponent {
   EntryDatabase(key: string) {
     if (key == '6a435159') {
       document.getElementById('output').innerHTML = 'chiave corretta';
-      this.selezionata = key;
+      this.divLogin = key;
       const obs = ajax({
         method: 'POST',
         url: URL + '/set?key=' + key,
