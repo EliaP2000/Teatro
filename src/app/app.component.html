@@ -1,12 +1,12 @@
 <h1>Teatro</h1>
 <br />
-<div *ngIf = "divLogin === undefined">
+<div *ngIf = "div === undefined">
   <input id="key" #key type="text" />
   <button id="bottoneKey" (click)="EntryDatabase(key.value)">Inserisci</button>
   <p id="output"></p>
 </div>
 
-<div *ngIf="divInserimento !== undefined">
+<div *ngIf="div !== undefined">
   <p>Scrivi il tuo nome, premi il pulsante prenota e clicca il posto che vuoi</p>
   <br />
   <input id="info" #info type="text" />
