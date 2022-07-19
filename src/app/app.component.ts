@@ -21,6 +21,7 @@ export class AppComponent {
   divLogin: string;
   divInserimento: string;
   divTeatro: string;
+  data:string;
 
   constructor() {
     this.bottoni = Array(70)
