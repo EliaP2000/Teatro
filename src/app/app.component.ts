@@ -21,7 +21,7 @@ export class AppComponent {
   divLogin: string;
   divInserimento: string;
   divTeatro: string;
-  
+
   constructor() {
     this.bottoni = Array(70)
       .fill(0)
@@ -69,6 +69,7 @@ export class AppComponent {
     } else {
       document.getElementById('output').innerHTML = 'chiave errata';
     }
+    console.log(this.divInserimento);
   }
   clean() {
     this.divInserimento=undefined;
