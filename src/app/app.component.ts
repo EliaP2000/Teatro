@@ -19,8 +19,7 @@ export class AppComponent {
   bottoni = [];
   bottoni1 = [];
   divLogin: string;
-  divInserimento: string;
-  divTeatro: string;
+  div: string;
 
   constructor() {
     this.bottoni = Array(70)
@@ -53,7 +52,7 @@ export class AppComponent {
   EntryDatabase(key: string) {
     if (key == '6a435159') {
       document.getElementById('output').innerHTML = 'chiave corretta';
-      this.divLogin = key;
+      this.div = key;
       const obs = ajax({
         method: 'POST',
         url: URL + '/set?key=' + key,
@@ -69,9 +68,9 @@ export class AppComponent {
     } else {
       document.getElementById('output').innerHTML = 'chiave errata';
     }
-    console.log(this.divInserimento);
+    console.log(this.div);
   }
   clean() {
-    this.divInserimento=undefined;
+    this.div=undefined;
   }
 }
