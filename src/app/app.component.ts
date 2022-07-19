@@ -70,7 +70,7 @@ export class AppComponent {
     }
     console.log(this.div);
   }
-  clean() {
-    this.div=undefined;
+  clean(info:string) {
+    this.div=info;
   }
 }
