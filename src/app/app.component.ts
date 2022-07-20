@@ -40,7 +40,7 @@ export class AppComponent {
           this.bottoni[j].style.backgroundColor = "red";
         }
         else{
-          document.getElementById('output').innerHTML = 'nome vuoto, ricaricarire la pagina';
+          document.getElementById('output').innerHTML = 'nome vuoto';
         }
       }
     }
@@ -56,7 +56,7 @@ export class AppComponent {
           this.bottoni1[j].style.backgroundColor = "red";
         }
         else{
-          document.getElementById('output').innerHTML = 'nome non inserito correttamente';
+          document.getElementById('output').innerHTML = 'nome vuoto';
         }
       }
     }
