@@ -32,10 +32,10 @@ export class AppComponent {
   public selezionaPostoPlatea(info: string, Numplatea: any) {
     for (var j = 0; j < this.bottoni.length; j++) {
       if (Numplatea == j) {
+        document.getElementById('output').innerHTML = 'nome inserito';
         this.bottoni[j] = info;
         this.bottoni[j].style.backgroundColor = "red";
         info = '';
-        document.getElementById('output').innerHTML = 'nome inserito';
       }
       else{
         document.getElementById('output').innerHTML = 'nome non inserito correttamente';
