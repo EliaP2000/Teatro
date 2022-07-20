@@ -46,10 +46,13 @@ export class AppComponent {
   public selezionaPostoPalchi(info: string, Numpalchi: any) {
     for (var j = 0; j < this.bottoni1.length; j++) {
       if (Numpalchi == j) {
-        this.bottoni1[j] = info;
-        this.bottoni1[j].style.backgroundColor = "red";
-        info = '';
         document.getElementById('output').innerHTML = 'nome inserito';
+        this.bottoni1[j] = info;
+        info = '';
+        this.bottoni1[j].style.backgroundColor = "red";
+      }
+      else{
+        document.getElementById('output').innerHTML = 'nome non inserito correttamente';
       }
     }
   }
