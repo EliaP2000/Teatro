@@ -36,6 +36,7 @@ export class AppComponent {
         if(info!=""){
           document.getElementById('output').innerHTML = 'nome inserito';
           this.bottoni[j] = info;
+          info="";
           //this.bottoni[j].style.backgroundColor = "red";
         }
         else{
@@ -43,9 +44,7 @@ export class AppComponent {
         }
       }
     }
-    this.div=undefined;
-    document.getElementById('output').innerHTML = 'iscrizione effettuata'+ info +';';
-    info="";
+    //this.div = undefined; RISOLVERE PROBLEMA DEL RITORNO ALLA PAGINA DI ACCESSO
   }
 
   public selezionaPostoPalchi(info: string, Numpalchi: any) {
