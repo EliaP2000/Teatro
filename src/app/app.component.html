@@ -6,13 +6,11 @@
   <p id="output"></p>
 </div>
 
-<div *ngIf = "div === info">
+<div *ngIf = "div !== undefine">
   <p>Scrivi il tuo nome, premi il pulsante prenota e clicca il posto che vuoi</p>
   <br />
   <input id="info" #info type="text" />
   <button id="bottonePrenota" (click)="clean(info)">Prenota</button>
-</div>
-<div *ngIf = "div !== undefine">
 <p>
   <button *ngFor="let platea of bottoni; let counter = index" style="background-color:green">
     <p (click)="selezionaPostoPlatea(info.value, counter)"
