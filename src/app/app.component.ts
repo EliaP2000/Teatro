@@ -43,7 +43,7 @@ export class AppComponent {
     for (var j = 0; j < this.bottoni1.length; j++) {
       if (Numpalchi == j) {
         this.bottoni1[j] = info;
-        //this.bottoni1[j].style.backgroundColor = "red";
+        this.bottoni1[j].style.backgroundColor = "red";
         info = '';
       }
     }
