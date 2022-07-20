@@ -34,8 +34,8 @@ export class AppComponent {
       if (Numplatea == j) {
         document.getElementById('output').innerHTML = 'nome inserito';
         this.bottoni[j] = info;
+        info="";
         this.bottoni[j].style.backgroundColor = "red";
-        info = '';
       }
       else{
         document.getElementById('output').innerHTML = 'nome non inserito correttamente';
