@@ -44,7 +44,6 @@ export class AppComponent {
         }
       }
     }
-    this.div = undefined;
   }
 
   public selezionaPostoPalchi(info: string, Numpalchi: any) {
