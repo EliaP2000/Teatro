@@ -37,14 +37,14 @@ export class AppComponent {
           document.getElementById('output').innerHTML = 'nome inserito';
           this.bottoni[j] = info;
           info="";
-          this.bottoni[j].style.backgroundColor = "red";
-          return this.div = undefined;
+          //this.bottoni[j].style.backgroundColor = "red";
         }
         else{
           document.getElementById('output').innerHTML = 'nome vuoto';
         }
       }
     }
+    this.div = undefined;
   }
 
   public selezionaPostoPalchi(info: string, Numpalchi: any) {
