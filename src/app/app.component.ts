@@ -18,7 +18,7 @@ export class AppComponent {
   public style: CSSStyleDeclaration;
   bottoni = [];
   bottoni1 = [];
-  info: string;
+  info: any;
   div: string;
 
 
