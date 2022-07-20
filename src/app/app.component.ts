@@ -36,7 +36,6 @@ export class AppComponent {
         if(info!=""){
           document.getElementById('output').innerHTML = 'nome inserito';
           this.bottoni[j] = info;
-          info="";
           //this.bottoni[j].style.backgroundColor = "red";
         }
         else{
@@ -44,6 +43,9 @@ export class AppComponent {
         }
       }
     }
+    this.div=undefined;
+    document.getElementById('output').innerHTML = 'iscrizione effettuata'+ info +';';
+    info="";
   }
 
   public selezionaPostoPalchi(info: string, Numpalchi: any) {
