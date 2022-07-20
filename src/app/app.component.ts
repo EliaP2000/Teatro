@@ -18,8 +18,9 @@ export class AppComponent {
   public style: CSSStyleDeclaration;
   bottoni = [];
   bottoni1 = [];
-  divLogin: string;
+  info: string;
   div: string;
+
 
   constructor() {
     this.bottoni = Array(70)
