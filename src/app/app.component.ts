@@ -31,14 +31,17 @@ export class AppComponent {
 
   public selezionaPostoPlatea(info: string, Numplatea: any) {
     for (var j = 0; j < this.bottoni.length; j++) {
+      console.log(info)
       if (Numplatea == j) {
-        document.getElementById('output').innerHTML = 'nome inserito';
-        this.bottoni[j] = info;
-        info="";
-        this.bottoni[j].style.backgroundColor = "red";
-      }
-      else{
-        document.getElementById('output').innerHTML = 'nome non inserito correttamente';
+        if(info!=""){
+          document.getElementById('output').innerHTML = 'nome inserito';
+          this.bottoni[j] = info;
+          info="";
+          this.bottoni[j].style.backgroundColor = "red";
+        }
+        else{
+          document.getElementById('output').innerHTML = 'nome vuoto, ricaricarire la pagina';
+        }
       }
     }
   }
@@ -46,13 +49,15 @@ export class AppComponent {
   public selezionaPostoPalchi(info: string, Numpalchi: any) {
     for (var j = 0; j < this.bottoni1.length; j++) {
       if (Numpalchi == j) {
-        document.getElementById('output').innerHTML = 'nome inserito';
-        this.bottoni1[j] = info;
-        info = '';
-        this.bottoni1[j].style.backgroundColor = "red";
-      }
-      else{
-        document.getElementById('output').innerHTML = 'nome non inserito correttamente';
+        if(info!=""){
+          document.getElementById('output').innerHTML = 'nome inserito';
+          this.bottoni1[j] = info;
+          info = '';
+          this.bottoni1[j].style.backgroundColor = "red";
+        }
+        else{
+          document.getElementById('output').innerHTML = 'nome non inserito correttamente';
+        }
       }
     }
   }
