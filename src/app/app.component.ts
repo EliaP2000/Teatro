@@ -33,7 +33,7 @@ export class AppComponent {
     for (var j = 0; j < this.bottoni.length; j++) {
       if (Numplatea == j) {
         this.bottoni[j] = info;
-        //this.bottoni[j].style.backgroundColor = "red";
+        this.bottoni[j].style.backgroundColor = "red";
         info = '';
       }
     }
@@ -48,6 +48,7 @@ export class AppComponent {
       }
     }
   }
+
   EntryDatabase(key: string) {
     if (key == '6a435159') {
       document.getElementById('output').innerHTML = 'chiave corretta';
@@ -67,8 +68,8 @@ export class AppComponent {
     } else {
       document.getElementById('output').innerHTML = 'chiave errata';
     }
-    console.log(this.div);
   }
+  
   clean() {
     this.div=undefined;
   }
