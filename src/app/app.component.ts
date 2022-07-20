@@ -35,6 +35,10 @@ export class AppComponent {
         this.bottoni[j] = info;
         this.bottoni[j].style.backgroundColor = "red";
         info = '';
+        document.getElementById('output').innerHTML = 'nome inserito';
+      }
+      else{
+        document.getElementById('output').innerHTML = 'nome non inserito correttamente';
       }
     }
   }
@@ -45,6 +49,7 @@ export class AppComponent {
         this.bottoni1[j] = info;
         this.bottoni1[j].style.backgroundColor = "red";
         info = '';
+        document.getElementById('output').innerHTML = 'nome inserito';
       }
     }
   }
