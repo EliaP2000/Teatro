@@ -11,14 +11,14 @@
   <br />
   <input id="info" #info type="text" />
 <p>
-  <button *ngFor="let platea of bottoni; let counter = index" style="background-color:green">
+  <button *ngFor="let platea of bottoni; let counter = index" style="background-color:green" >
     <p (click)="selezionaPostoPlatea(info.value, counter)"
     >{{ platea }}</p>
   </button>
 </p>
 <p>
   <button *ngFor="let palchi of bottoni1; let counter = index" style="background-color:green">
-    <p (click)="selezionaPostoPalchi(info.value, counter)" [ngClass] = "{ 'green': toggle, 'red': !toggle }"
+    <p (click)="selezionaPostoPalchi(info.value, counter)"
     >{{ palchi }}</p>
   </button>
 </p>
