@@ -10,7 +10,6 @@
   <p>Scrivi il tuo nome, premi il pulsante prenota e clicca il posto che vuoi</p>
   <br />
   <input id="info" #info type="text" />
-  <!--<button id="bottonePrenota" (click)="clean()">Prenota</button>-->
 <p>
   <button *ngFor="let platea of bottoni; let counter = index" style="background-color:green">
     <p (click)="selezionaPostoPlatea(info.value, counter)"
@@ -24,4 +23,5 @@
   </button>
 </p>
 <p id="output"></p>
+<button *ngif= "output == defined" id="bottonePrenota" (click)="clean()">Prenota</button>
 </div>
