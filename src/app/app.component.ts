@@ -79,7 +79,10 @@ export class AppComponent {
         },
         error: (err: AjaxError) => console.error(err.response),
       });
-    } else {
+    } else if(key == ''){
+      document.getElementById('output').innerHTML = 'chiave non inserita';
+    }
+    else{
       document.getElementById('output').innerHTML = 'chiave errata';
     }
   }
