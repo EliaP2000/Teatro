@@ -23,5 +23,5 @@
   </button>
 </p>
 <p id="output"></p>
-<button *ngif = "output === defined" (click)="clean()">Prenota</button>
+<button *ngif = "output !== defined" (click)="clean()">Prenota</button>
 </div>
