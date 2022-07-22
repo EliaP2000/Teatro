@@ -35,10 +35,10 @@ export class AppComponent {
       if (Numplatea == j) {
         if(info!=""){
           document.getElementById('output').innerHTML = 'nome inserito';
+          this.home=undefined 
           this.bottoni[j] = info;
           info="";
           //this.bottoni[j].style.backgroundColor = "red";
-          this.home=undefined 
         }
         else{
           document.getElementById('output').innerHTML = 'nome vuoto';
