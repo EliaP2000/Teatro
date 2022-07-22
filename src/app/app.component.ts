@@ -38,7 +38,7 @@ export class AppComponent {
           this.home=undefined 
           this.bottoni[j] = info;
           info="";
-          //this.bottoni[j].style.backgroundColor = "red";
+          this.bottoni[j].style.backgroundColor = "red";
         }
         else{
           document.getElementById('output').innerHTML = 'nome vuoto';
