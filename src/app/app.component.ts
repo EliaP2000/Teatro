@@ -19,6 +19,7 @@ export class AppComponent {
   bottoni = [];
   bottoni1 = [];
   div: string;
+  home: string;
 
   constructor() {
     this.bottoni = Array(70)
@@ -37,6 +38,7 @@ export class AppComponent {
           this.bottoni[j] = info;
           info="";
           //this.bottoni[j].style.backgroundColor = "red";
+          this.home=undefined 
         }
         else{
           document.getElementById('output').innerHTML = 'nome vuoto';
@@ -54,6 +56,7 @@ export class AppComponent {
           this.bottoni1[j] = info;
           info = '';
           this.bottoni1[j].style.backgroundColor = "red";
+          this.home=undefined 
         }
         else{
           document.getElementById('output').innerHTML = 'nome vuoto';
