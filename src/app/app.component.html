@@ -18,7 +18,7 @@
 </p>
 <p>
   <button *ngFor="let palchi of bottoni1; let counter = index" style="background-color:green">
-    <p (click)="selezionaPostoPalchi(info.value, counter)"
+    <p (click)="selezionaPostoPalchi(info.value, counter)" [ngClass] = "{ 'green': toggle, 'red': !toggle }"
     >{{ palchi }}</p>
   </button>
 </p>
