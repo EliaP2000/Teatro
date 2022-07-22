@@ -23,5 +23,7 @@
   </button>
 </p>
 <p id="output"></p>
-<button *ngif = "home === undefined" (click)="clean()">Prenota</button>
+  <div *ngif = "home === undefined">
+    <button (click)="clean()"> Nuova prenotazione </button>
+  </div>
 </div>
