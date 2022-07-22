@@ -31,7 +31,6 @@ export class AppComponent {
 
   public selezionaPostoPlatea(info: string, Numplatea: any) {
     for (var j = 0; j < this.bottoni.length; j++) {
-      console.log(info)
       if (Numplatea == j) {
         if(info!=""){
           document.getElementById('output').innerHTML = 'nome inserito';
