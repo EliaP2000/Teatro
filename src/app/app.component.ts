@@ -40,8 +40,8 @@ export class AppComponent {
         } else {
           document.getElementById('output').innerHTML = 'nome vuoto';
         }
+        this.home=undefined;
       }
-      this.home=undefined;
     }
     //this.div = undefined; RISOLVERE PROBLEMA DEL RITORNO ALLA PAGINA DI ACCESSO
     //risolvere problema della stampa del posto già prenotato. Per adesso non toccare i nomi inseriti nell'array
