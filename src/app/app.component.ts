@@ -33,10 +33,10 @@ export class AppComponent {
     for (var j = 0; j < this.bottoni.length; j++) {
       if (Numplatea == j) {
         if(info!=""){
-          document.getElementById('output').innerHTML = 'nome inserito';
-          this.home=undefined 
+          document.getElementById('output').innerHTML = 'nome inserito'; 
           this.bottoni[j] = info;
           info="";
+          this.div=undefined
         }
         else {
           document.getElementById('output').innerHTML = 'nome vuoto';
