@@ -36,14 +36,13 @@ export class AppComponent {
         if(info!=''){
           document.getElementById('output').innerHTML = 'nome inserito'; 
           this.bottoni[j]= info;
-          document.getElementById('output').innerHTML = 'Posto ' + Numplatea + ' prenotato per ' + info;
-          info='';
-          this.home=undefined;
         } else {
           document.getElementById('output').innerHTML = 'nome vuoto';
         }
-      } else{
       }
+      document.getElementById('output').innerHTML = 'Posto ' + Numplatea + ' prenotato per ' + info;
+      info='';
+      this.home=undefined;
     }
     //this.div = undefined; RISOLVERE PROBLEMA DEL RITORNO ALLA PAGINA DI ACCESSO
     //risolvere problema della stampa del posto già prenotato. Per adesso non toccare i nomi inseriti nell'array
