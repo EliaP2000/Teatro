@@ -36,14 +36,12 @@ export class AppComponent {
         if(info!=''){
           document.getElementById('output').innerHTML = 'Posto in Platea ' + (Numplatea+1) + ' prenotato per ' + info;
           this.bottoni[j] = info;
-          //this.bottoni[j].style.setProperty('background-color', 'red');
           this.home=undefined;
         } else {
           document.getElementById('output').innerHTML = 'nome vuoto';
         }
       }
     }
-    //this.div = undefined; RISOLVERE PROBLEMA DEL RITORNO ALLA PAGINA DI ACCESSO
     //risolvere problema della stampa del posto già prenotato. Per adesso non toccare i nomi inseriti nell'array
   }
 
@@ -51,10 +49,8 @@ export class AppComponent {
     for (var j = 0; j < this.bottoni1.length; j++) {
       if (Numpalchi == j) {
         if(info!=''){
-          document.getElementById('output').innerHTML = 'nome inserito';
+          document.getElementById('output').innerHTML = 'Posto in Platea ' + (Numpalchi+1) + ' prenotato per ' + info;
           this.bottoni1[j] = info;
-          info = '';
-          this.bottoni1[j].style.backgroundColor = "red";
           this.home=undefined;
         }
         else{
