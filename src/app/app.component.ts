@@ -66,7 +66,7 @@ export class AppComponent {
   }
 
   EntryDatabase(key: string) {
-    if(this.result!=""){
+    if(this.result!=''){
       document.getElementById('output').innerHTML = this.result;
     }
     if (key == '6a435159') {
