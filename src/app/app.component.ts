@@ -21,7 +21,6 @@ export class AppComponent {
   div: string;
   home: string = "";
   result:string = "";
-  chiave: string;
   constructor() {
     this.bottoni = Array(70)
       .fill(0)
@@ -38,9 +37,9 @@ export class AppComponent {
           document.getElementById('output').innerHTML = 'nome inserito'; 
           this.bottoni[j] = info;
           info="";
+          this.home=undefined;
           this.result = "Posto Prenotato " + j + "per " + info;
-          this.div=undefined;
-          this.EntryDatabase(this.result);
+          this.EntryDatabase("inserire chiave",this.result);
         }
         else {
           document.getElementById('output').innerHTML = 'nome vuoto';
@@ -67,14 +66,13 @@ export class AppComponent {
     }
   }
 
-  EntryDatabase(key: string) {
-    key=this.chiave;
-    if (this.chiave == '6a435159') {
+  EntryDatabase(key: string, result: string) {
+    if (key == '6a435159') {
       document.getElementById('output').innerHTML = 'chiave corretta';
-      this.div = this.chiave;
+      this.div = key;
       const obs = ajax({
         method: 'POST',
-        url: URL + '/set?key=' + this.chiave,
+        url: URL + '/set?key=' + key,
         crossDomain: true,
         //body: document.getElementById('data').value
       });
@@ -84,13 +82,10 @@ export class AppComponent {
         },
         error: (err: AjaxError) => console.error(err.response),
       });
-    } else if(this.chiave == ''){
+    } else if(key == ''){
       document.getElementById('output').innerHTML = 'chiave non inserita';
     }
-    else if(this.chiave==this.result){
-      document.getElementById('output').innerHTML = this.chiave;
-    }
-    else {
+    else{
       document.getElementById('output').innerHTML = 'chiave errata';
     }
   }
