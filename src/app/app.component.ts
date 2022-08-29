@@ -36,7 +36,7 @@ export class AppComponent {
           document.getElementById('output').innerHTML = 'nome inserito'; 
           this.bottoni[j] = info;
           info="";
-          this.div=undefined;
+          this.home=undefined;
         }
         else {
           document.getElementById('output').innerHTML = 'nome vuoto';
