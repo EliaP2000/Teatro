@@ -49,7 +49,7 @@ export class AppComponent {
     for (var j = 0; j < this.bottoni1.length; j++) {
       if (Numpalchi == j) {
         if(info!=''){
-          document.getElementById('output').innerHTML = 'Posto in Platea ' + (Numpalchi+1) + ' prenotato per ' + info;
+          document.getElementById('output').innerHTML = 'Posto sul Palco ' + (Numpalchi+1) + ' prenotato per ' + info;
           this.bottoni1[j] = info;
           this.home=undefined;
         }
