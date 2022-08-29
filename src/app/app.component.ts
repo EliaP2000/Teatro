@@ -36,7 +36,7 @@ export class AppComponent {
         if(info!=''){
           document.getElementById('output').innerHTML = 'Posto in Platea ' + (Numplatea+1) + ' prenotato per ' + info;
           this.bottoni[j] = info;
-          this.bottoni[j].style.backgroundColor = 'red';
+          this.bottoni[j].style.setProperty('background-color', 'red');
           this.home=undefined;
         } else {
           document.getElementById('output').innerHTML = 'nome vuoto';
