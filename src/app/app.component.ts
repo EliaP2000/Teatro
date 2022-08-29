@@ -89,5 +89,4 @@ export class AppComponent {
   
   clean() {
     this.div=undefined;
-  }
 }
