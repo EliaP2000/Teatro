@@ -33,11 +33,11 @@ export class AppComponent {
   public selezionaPostoPlatea(info: string, Numplatea: any) {
     for (var j = 0; j < this.bottoni.length; j++) {
       if (Numplatea == j) {
-        if(info!=""){
+        if(info!=''){
           document.getElementById('output').innerHTML = 'nome inserito'; 
           this.bottoni[j] = info;
           document.getElementById('output').innerHTML = 'Posto ' + (j+1) + ' prenotato per ' + info;
-          info="";
+          info='';
           this.home=undefined;
         }
         else {
@@ -51,7 +51,7 @@ export class AppComponent {
   public selezionaPostoPalchi(info: string, Numpalchi: any) {
     for (var j = 0; j < this.bottoni1.length; j++) {
       if (Numpalchi == j) {
-        if(info!=""){
+        if(info!=''){
           document.getElementById('output').innerHTML = 'nome inserito';
           this.bottoni1[j] = info;
           info = '';
