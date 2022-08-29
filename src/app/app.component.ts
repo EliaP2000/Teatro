@@ -21,6 +21,7 @@ export class AppComponent {
   div: string;
   home: string = "";
   result:string = "";
+  chiave: string;
   constructor() {
     this.bottoni = Array(70)
       .fill(0)
@@ -67,12 +68,13 @@ export class AppComponent {
   }
 
   EntryDatabase(key: string) {
-    if (key == '6a435159') {
+    key=this.chiave;
+    if (this.chiave == '6a435159') {
       document.getElementById('output').innerHTML = 'chiave corretta';
-      this.div = key;
+      this.div = this.chiave;
       const obs = ajax({
         method: 'POST',
-        url: URL + '/set?key=' + key,
+        url: URL + '/set?key=' + this.chiave,
         crossDomain: true,
         //body: document.getElementById('data').value
       });
@@ -82,11 +84,11 @@ export class AppComponent {
         },
         error: (err: AjaxError) => console.error(err.response),
       });
-    } else if(key == ''){
+    } else if(this.chiave == ''){
       document.getElementById('output').innerHTML = 'chiave non inserita';
     }
-    else if(key==this.result){
-      document.getElementById('output').innerHTML = key;
+    else if(this.chiave==this.result){
+      document.getElementById('output').innerHTML = this.chiave;
     }
     else {
       document.getElementById('output').innerHTML = 'chiave errata';
