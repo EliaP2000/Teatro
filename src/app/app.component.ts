@@ -39,12 +39,10 @@ export class AppComponent {
           document.getElementById('output').innerHTML = 'Posto ' + (j+1) + ' prenotato per ' + info;
           info='';
           this.home=undefined;
-        }
-        else {
+        } else {
           document.getElementById('output').innerHTML = 'nome vuoto';
         }
-      }
-      else{
+      } else{
         document.getElementById('output').innerHTML = 'Posto già prenotato da: ' + this.bottoni[j]; 
       }
     }
