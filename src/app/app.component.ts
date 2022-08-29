@@ -38,13 +38,13 @@ export class AppComponent {
           this.bottoni[j] = info;
           info="";
           this.result = "Posto Prenotato " + j + "per " + info;
+          this.div=undefined;
           this.EntryDatabase(this.result);
         }
         else {
           document.getElementById('output').innerHTML = 'nome vuoto';
         }
       }
-      this.div=undefined;
     }
     //this.div = undefined; RISOLVERE PROBLEMA DEL RITORNO ALLA PAGINA DI ACCESSO
   }
@@ -66,7 +66,7 @@ export class AppComponent {
     }
   }
 
-public  EntryDatabase(key: string) {
+  EntryDatabase(key: string) {
     if (key == '6a435159') {
       document.getElementById('output').innerHTML = 'chiave corretta';
       this.div = key;
