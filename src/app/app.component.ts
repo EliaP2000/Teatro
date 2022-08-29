@@ -38,7 +38,7 @@ export class AppComponent {
           this.bottoni[j] = info;
           this.result="Posto prenotato " + j + "per " + info;
           info="";
-          this.home=undefined;
+          this.div=undefined;
         }
         else {
           document.getElementById('output').innerHTML = 'nome vuoto';
