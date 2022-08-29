@@ -42,7 +42,7 @@ export class AppComponent {
           document.getElementById('output').innerHTML = 'nome vuoto';
         }
       } else{
-        document.getElementById('output').innerHTML = 'Posto ' + (j+1) + ' prenotato per ' + info;
+        document.getElementById('output').innerHTML = 'Posto ' + Numplatea + ' prenotato per ' + info;
       }
     }
     //this.div = undefined; RISOLVERE PROBLEMA DEL RITORNO ALLA PAGINA DI ACCESSO
