@@ -89,6 +89,7 @@ export class AppComponent {
     }
     if(this.result!=""){
       document.getElementById('output').innerHTML = this.result;
+      this.result = "";
     }
   }
   
