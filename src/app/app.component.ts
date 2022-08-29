@@ -37,8 +37,8 @@ export class AppComponent {
           document.getElementById('output').innerHTML = 'nome inserito'; 
           this.bottoni[j] = info;
           info="";
-          this.home=undefined;
           this.result = "Posto Prenotato " + j + "per " + info;
+          this.div=undefined;
           this.EntryDatabase("inserire chiave",this.result);
         }
         else {
@@ -85,7 +85,10 @@ export class AppComponent {
     } else if(key == ''){
       document.getElementById('output').innerHTML = 'chiave non inserita';
     }
-    else{
+    else if(result==this.result){
+      document.getElementById('output').innerHTML = result;
+    }
+    else {
       document.getElementById('output').innerHTML = 'chiave errata';
     }
   }
