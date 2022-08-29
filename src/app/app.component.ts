@@ -45,7 +45,7 @@ export class AppComponent {
         }
       }
       else{
-        document.getElementById('output').innerHTML = 'Posto già prenotato da: ' + this.bottoni[j].value; 
+        document.getElementById('output').innerHTML = 'Posto già prenotato da: ' + this.bottoni[j]; 
       }
     }
     //this.div = undefined; RISOLVERE PROBLEMA DEL RITORNO ALLA PAGINA DI ACCESSO
