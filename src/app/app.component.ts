@@ -41,7 +41,6 @@ export class AppComponent {
         }
       }
       document.getElementById('output').innerHTML = 'Posto ' + Numplatea + ' prenotato per ' + info;
-      info='';
       this.home=undefined;
     }
     //this.div = undefined; RISOLVERE PROBLEMA DEL RITORNO ALLA PAGINA DI ACCESSO
