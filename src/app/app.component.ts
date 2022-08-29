@@ -36,14 +36,13 @@ export class AppComponent {
         if(info!=''){
           document.getElementById('output').innerHTML = 'nome inserito'; 
           this.bottoni[j]= info;
-          document.getElementById('output').innerHTML = 'Posto ' + (j+1) + ' prenotato per ' + info;
           info='';
           this.home=undefined;
         } else {
           document.getElementById('output').innerHTML = 'nome vuoto';
         }
       } else{
-        document.getElementById('output').innerHTML = 'Posto già prenotato da: ' + this.bottoni[j]; 
+        document.getElementById('output').innerHTML = 'Posto ' + (j+1) + ' prenotato per ' + info;
       }
     }
     //this.div = undefined; RISOLVERE PROBLEMA DEL RITORNO ALLA PAGINA DI ACCESSO
