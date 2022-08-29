@@ -23,7 +23,7 @@ export class AppComponent {
   result:string = "";
   constructor() {
     this.bottoni = Array(70)
-      .fill(0);
+      .map((x, i) => i + 1);
     this.bottoni1 = Array(24)
       .fill(0)
       .map((x, i) => i + 1);
