@@ -34,9 +34,9 @@ export class AppComponent {
     for (var j = 0; j < this.bottoni.length; j++) {
       if (Numplatea == j) {
         if(info!=''){
+          document.getElementById('output').innerHTML = 'Posto ' + (Numplatea+1) + ' prenotato per ' + info;
           this.bottoni[j] = info;
           this.bottoni[j].style.backgroundColor = 'red';
-          document.getElementById('output').innerHTML = 'Posto ' + (Numplatea+1) + ' prenotato per ' + info;
         } else {
           document.getElementById('output').innerHTML = 'nome vuoto';
         }
