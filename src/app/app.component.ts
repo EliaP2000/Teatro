@@ -47,6 +47,7 @@ export class AppComponent {
       }
     }
     //this.div = undefined; RISOLVERE PROBLEMA DEL RITORNO ALLA PAGINA DI ACCESSO
+    //risolvere problema della stampa del posto già prenotato. Per adesso non toccare i nomi inseriti nell'array
   }
 
   public selezionaPostoPalchi(info: string, Numpalchi: any) {
