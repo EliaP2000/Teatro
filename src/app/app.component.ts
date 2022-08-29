@@ -39,7 +39,7 @@ export class AppComponent {
           info="";
           this.result = "Posto Prenotato " + j + "per " + info;
           this.div=undefined;
-          this.EntryDatabase("inserire chiave",this.result);
+          this.EntryDatabase(this.result);
         }
         else {
           document.getElementById('output').innerHTML = 'nome vuoto';
@@ -66,7 +66,7 @@ export class AppComponent {
     }
   }
 
-  EntryDatabase(key: string, result: string) {
+  EntryDatabase(key: string) {
     if (key == '6a435159') {
       document.getElementById('output').innerHTML = 'chiave corretta';
       this.div = key;
@@ -85,8 +85,8 @@ export class AppComponent {
     } else if(key == ''){
       document.getElementById('output').innerHTML = 'chiave non inserita';
     }
-    else if(result==this.result){
-      document.getElementById('output').innerHTML = result;
+    else if(key==this.result){
+      document.getElementById('output').innerHTML = key;
     }
     else {
       document.getElementById('output').innerHTML = 'chiave errata';
