@@ -36,7 +36,7 @@ export class AppComponent {
         if(info!=""){
           document.getElementById('output').innerHTML = 'nome inserito'; 
           this.bottoni[j] = info;
-          document.getElementById('output').innerHTML = 'Posto prenotato ' + j + 'per ' + info;
+          document.getElementById('output').innerHTML = 'Posto ' + (j+1) + ' prenotato per ' + info;
           info="";
           this.home=undefined;
         }
