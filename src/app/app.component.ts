@@ -21,6 +21,7 @@ export class AppComponent {
   div: string;
   home: string = "";
   result:string = "";
+  platea:string;
   constructor() {
     this.bottoni = Array(70)
       .fill(0)
