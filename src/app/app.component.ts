@@ -36,6 +36,7 @@ export class AppComponent {
         if(info!=""){
           document.getElementById('output').innerHTML = 'nome inserito'; 
           this.bottoni[j] = info;
+          this.result="Posto prenotato " + j + "per " + info;
           info="";
           this.home=undefined;
         }
@@ -85,6 +86,9 @@ export class AppComponent {
     }
     else{
       document.getElementById('output').innerHTML = 'chiave errata';
+    }
+    if(this.result!=""){
+      document.getElementById('output').innerHTML = this.result;
     }
   }
   
