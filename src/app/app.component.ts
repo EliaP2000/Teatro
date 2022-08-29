@@ -38,7 +38,10 @@ export class AppComponent {
           this.bottoni[j] = info;
           info="";
         }
-        else{
+        else if(this.bottoni[j].value){
+          document.getElementById('output').innerHTML = 'posto occupato';
+        }
+        else {
           document.getElementById('output').innerHTML = 'nome vuoto';
         }
       }
