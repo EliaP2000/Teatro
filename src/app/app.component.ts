@@ -40,7 +40,7 @@ export class AppComponent {
           document.getElementById('output').innerHTML = 'nome vuoto';
         }
       }
-      document.getElementById('output').innerHTML = 'Posto ' + Numplatea + ' prenotato per ' + info;
+      document.getElementById('output').innerHTML = 'Posto ' + (Numplatea+1) + ' prenotato per ' + info;
       this.home=undefined;
     }
     //this.div = undefined; RISOLVERE PROBLEMA DEL RITORNO ALLA PAGINA DI ACCESSO
