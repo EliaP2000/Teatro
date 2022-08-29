@@ -38,8 +38,6 @@ export class AppComponent {
           this.bottoni[j] = info;
           info="";
           this.home=undefined;
-          this.result = "Posto Prenotato " + j + "per " + info;
-          this.EntryDatabase(this.result);
         }
         else {
           document.getElementById('output').innerHTML = 'nome vuoto';
