@@ -20,6 +20,7 @@ export class AppComponent {
   bottoni1 = [];
   div: string;
   home: string = "";
+  result:string = "";
   constructor() {
     this.bottoni = Array(70)
       .fill(0)
@@ -37,6 +38,8 @@ export class AppComponent {
           this.bottoni[j] = info;
           info="";
           this.home=undefined;
+          this.result = "Posto Prenotato " + j + "per " + info;
+          this.EntryDatabase("inserire chiave",this.result);
         }
         else {
           document.getElementById('output').innerHTML = 'nome vuoto';
@@ -54,7 +57,7 @@ export class AppComponent {
           this.bottoni1[j] = info;
           info = '';
           this.bottoni1[j].style.backgroundColor = "red";
-          this.home=undefined 
+          this.home=undefined;
         }
         else{
           document.getElementById('output').innerHTML = 'nome vuoto';
@@ -63,7 +66,7 @@ export class AppComponent {
     }
   }
 
-  EntryDatabase(key: string) {
+  EntryDatabase(key: string, result: string) {
     if (key == '6a435159') {
       document.getElementById('output').innerHTML = 'chiave corretta';
       this.div = key;
