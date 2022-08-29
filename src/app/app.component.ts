@@ -35,7 +35,7 @@ export class AppComponent {
       if (Numplatea == j) {
         if(info!=''){
           document.getElementById('output').innerHTML = 'nome inserito'; 
-          this.bottoni[j] = info;
+          this.bottoni[j].value = info;
           document.getElementById('output').innerHTML = 'Posto ' + (j+1) + ' prenotato per ' + info;
           info='';
           this.home=undefined;
@@ -43,6 +43,9 @@ export class AppComponent {
         else {
           document.getElementById('output').innerHTML = 'nome vuoto';
         }
+      }
+      else{
+        document.getElementById('output').innerHTML = 'Posto già prenotato da: ' + this.bottoni[j].value; 
       }
     }
     //this.div = undefined; RISOLVERE PROBLEMA DEL RITORNO ALLA PAGINA DI ACCESSO
