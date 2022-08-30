@@ -27,6 +27,14 @@ export class AppComponent {
     this.bottoni1 = Array(24)
       .fill(0)
       .map((x, i) => i + 1);
+    for (var j = 0; j < this.bottoni.length; j++) {
+      if(this.bottoni[j]%10==0){
+        document.getElementsByTagName('br/');
+      }
+    for (var j = 0; j < this.bottoni.length; j++) {
+      if(this.bottoni1[j]%10==0){
+        document.getElementsByTagName('br/');
+      }
   }
 
   public selezionaPostoPlatea(info: string, Numplatea: any) {
