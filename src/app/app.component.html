@@ -16,9 +16,9 @@
   <br />
   <input id="info" #info type="text" />
 <p>
-  <button *ngFor="let platea of bottoni; let counter = index" [style.background-color]="myColorVaraible" 
+  <button *ngFor="let platea of bottoni; let counter = index" 
   (click)="selezionaPostoPlatea(info.value, counter)">
-    <p>
+    <p [ngClass]="{'green' : toggle, 'red': !toggle}">
       {{ platea }}
     </p>
   </button>
