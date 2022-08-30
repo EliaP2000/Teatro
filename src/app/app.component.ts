@@ -17,7 +17,7 @@ const URL: string =
 })
 
 export class AppComponent {
-  public value;
+  public value: any;
   public style: CSSStyleDeclaration;
   bottoni = [];
   bottoni1 = [];
