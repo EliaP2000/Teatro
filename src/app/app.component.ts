@@ -1,11 +1,15 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ajax, AjaxResponse, AjaxRequest, AjaxError } from 'rxjs/ajax';
-/*let info = document.getElementById("data") as string|HTMLInputElement;
-console.log(info)*/
 
 const URL: string =
   'https://eu-central-1.aws.data.mongodb-api.com/app/kvaas-giwjg/endpoint';
+
+/*problemi da risolvere: array sy 7 linee
+                         colore della cella
+                         inserire la get per connettersi al database esterno
+                         posto già assegnato (facoltativo)
+*/
 
 @Component({
   selector: 'my-app',
@@ -55,7 +59,6 @@ export class AppComponent {
         }
       }
     }
-    //risolvere problema della stampa del posto già prenotato. Per adesso non toccare i nomi inseriti nell'array
   }
 
   public selezionaPostoPalchi(info: string, Numpalchi: any) {
