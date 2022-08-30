@@ -51,11 +51,11 @@ export class AppComponent {
     for (var j = 0; j < this.bottoni.length; j++) {
       if (Numplatea == j) {
         if(info!=''){
-          document.getElementById('output').innerHTML = 'Posto in Platea ' + (Numplatea+1) + ' prenotato per ' + info;
+          document.getElementById('outputPrenotazione').innerHTML = 'Posto in Platea ' + (Numplatea+1) + ' prenotato per ' + info;
           this.bottoni[j] = info;
           this.home=undefined;
         } else {
-          document.getElementById('output').innerHTML = 'nome vuoto';
+          document.getElementById('outputPrenotazione').innerHTML = 'nome vuoto';
         }
       }
     }
@@ -65,12 +65,12 @@ export class AppComponent {
     for (var j = 0; j < this.bottoni1.length; j++) {
       if (Numpalchi == j) {
         if(info!=''){
-          document.getElementById('output').innerHTML = 'Posto sul Palco ' + (Numpalchi+1) + ' prenotato per ' + info;
+          document.getElementById('outputPrenotazione').innerHTML = 'Posto sul Palco ' + (Numpalchi+1) + ' prenotato per ' + info;
           this.bottoni1[j] = info;
           this.home=undefined;
         }
         else{
-          document.getElementById('output').innerHTML = 'nome vuoto';
+          document.getElementById('outputPrenotazione').innerHTML = 'nome vuoto';
         }
       }
     }
@@ -105,12 +105,11 @@ export class AppComponent {
   }
 
   setValue(key: string) {
-    console.log(document.getElementById('data'));
     const obs = ajax({
       method: 'POST',
       url:URL + '/set?key=' + key,
       crossDomain: true,
-      body: document.getElementById('data').value,
+      body: '6a435159',
     })
     obs.subscribe({
       next: (res: AjaxResponse<any>) => {
