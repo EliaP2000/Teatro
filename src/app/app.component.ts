@@ -21,6 +21,8 @@ export class AppComponent {
   div: string;
   home: string = "";
   result:string = "";
+  style1;
+  style2;
   constructor() {
     this.bottoni = Array(70)
       .fill(0)
