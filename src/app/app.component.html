@@ -16,9 +16,11 @@
   <br />
   <input id="info" #info type="text" />
 <p>
-  <button *ngFor="let platea of bottoni; let counter = index" [style.background-color]="myColorVaraible">
-    <p (click)="selezionaPostoPlatea(info.value, counter)"
-    >{{ platea }}</p>
+  <button *ngFor="let platea of bottoni; let counter = index" [style.background-color]="myColorVaraible" 
+  (click)="selezionaPostoPlatea(info.value, counter)">
+    <p>
+      {{ platea }}
+    </p>
   </button>
 </p>
 <p>
