@@ -7,7 +7,6 @@ const URL: string =
 
 /*problemi da risolvere: array sy 7 linee
                          colore della cella (facoltativo)
-                         inserire la get per connettersi al database esterno (controllare i bottoni HTML con il file del prof e modificare la parte di document.getElementById (data))
                          posto già assegnato (facoltativo)
 */
 
@@ -98,7 +97,7 @@ export class AppComponent {
     });
     obs.subscribe({
       next: (res: AjaxResponse<any>) => {
-        document.getElementById('output').innerHTML = res.response;
+        console.log(res.response);
       },
       error: (err: AjaxError) => console.error(err.response),
     });
@@ -113,7 +112,7 @@ export class AppComponent {
     })
     obs.subscribe({
       next: (res: AjaxResponse<any>) => {
-        document.getElementById('output').innerHTML = 'Ok!';
+        console.log('Ok!');
       },
       error: (err: AjaxError) => console.error(err.response),
     });
