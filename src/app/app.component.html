@@ -24,7 +24,7 @@
   </button>
 </p>
 <p>
-  <button *ngFor="let palchi of bottoni1; let counter = index" style="color:green">
+  <button *ngFor="let palchi of bottoni1; let counter = index" style="color:green" (click)="selezionaPostoPalchi(info.value, counter)">
     <p>
       {{ palchi }}
     </p>
