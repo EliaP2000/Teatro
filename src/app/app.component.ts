@@ -60,9 +60,6 @@ export class AppComponent {
   }
 
   EntryDatabase(key: string) {
-    if(this.result!=''){
-      document.getElementById('output').innerHTML = this.result;
-    }
     if (key == '6a435159') {
       document.getElementById('output').innerHTML = 'chiave corretta';
       this.div = key;
