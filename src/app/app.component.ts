@@ -21,8 +21,7 @@ export class AppComponent {
   div: string;
   home: string = "";
   result:string = "";
-  style1;
-  style2;
+  myColorVaraible = 'green';
   constructor() {
     this.bottoni = Array(70)
       .fill(0)
@@ -38,6 +37,7 @@ export class AppComponent {
         if(info!=''){
           document.getElementById('output').innerHTML = 'Posto in Platea ' + (Numplatea+1) + ' prenotato per ' + info;
           this.bottoni[j] = info;
+          this.myColorVaraible = 'red';
           this.home=undefined;
         } else {
           document.getElementById('output').innerHTML = 'nome vuoto';
