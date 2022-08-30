@@ -6,7 +6,7 @@ const URL: string =
   'https://eu-central-1.aws.data.mongodb-api.com/app/kvaas-giwjg/endpoint';
 
 /*problemi da risolvere: array sy 7 linee
-                         colore della cella
+                         colore della cella (facoltativo)
                          inserire la get per connettersi al database esterno
                          posto già assegnato (facoltativo)
 */
@@ -18,7 +18,7 @@ const URL: string =
 })
 
 export class AppComponent {
-  public value: any;
+  public value;
   public style: CSSStyleDeclaration;
   bottoni = [];
   bottoni1 = [];
@@ -80,18 +80,8 @@ export class AppComponent {
     if (key == '6a435159') {
       document.getElementById('output').innerHTML = 'chiave corretta';
       this.div = key;
-      const obs = ajax({
-        method: 'POST',
-        url: URL + '/set?key=' + key,
-        crossDomain: true,
-        //body: document.getElementById('data').value
-      });
-      obs.subscribe({
-        next: (res: AjaxResponse<any>) => {
-          document.getElementById('output').innerHTML = 'Ok!'; //response se il nuovo valore venisse settato
-        },
-        error: (err: AjaxError) => console.error(err.response),
-      });
+      var conn = this.getValue(key);
+      conn = this.setValue(key);
     } else if(key == ''){
       document.getElementById('output').innerHTML = 'chiave non inserita';
     }
@@ -99,7 +89,37 @@ export class AppComponent {
       document.getElementById('output').innerHTML = 'chiave errata';
     }
   }
-  
+
+  getValue(key: string) {
+    const obs = ajax({
+      method: 'GET',
+      url: URL + '/get?key=' + key,
+      crossDomain: true,
+    });
+    obs.subscribe({
+      next: (res: AjaxResponse<any>) => {
+        document.getElementById('output').innerHTML = res.response;
+      },
+      error: (err: AjaxError) => console.error(err.response),
+    });
+  }
+
+  setValue(key: string) {
+    console.log(document.getElementById('data'));
+    const obs = ajax({
+      method: 'POST',
+      url:URL + '/set?key=' + key,
+      crossDomain: true,
+      body: document.getElementById('data').value,
+    })
+    obs.subscribe({
+      next: (res: AjaxResponse<any>) => {
+        document.getElementById('output').innerHTML = 'Ok!';
+      },
+      error: (err: AjaxError) => console.error(err.response),
+    });
+  }
+
   clean() {
     this.div=undefined;
   }
