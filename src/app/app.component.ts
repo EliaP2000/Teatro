@@ -54,7 +54,7 @@ export class AppComponent {
           this.bottoni[j] = info;
           this.home=undefined;
         } else {
-          document.getElementById('outputPrenotazione').innerHTML = 'nome vuoto';
+          document.getElementById('outputPrenotazione').innerHTML = 'Casella Nome vuoto';
         }
       }
     }
