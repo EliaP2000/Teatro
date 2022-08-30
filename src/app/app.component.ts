@@ -20,9 +20,6 @@ export class AppComponent {
   bottoni1 = [];
   div: string;
   home: string = "";
-  result:string = "";
-  myColorVaraible = 'green';
-  toggle = true;
   constructor() {
     this.bottoni = Array(70)
       .fill(0)
@@ -38,8 +35,6 @@ export class AppComponent {
         if(info!=''){
           document.getElementById('output').innerHTML = 'Posto in Platea ' + (Numplatea+1) + ' prenotato per ' + info;
           this.bottoni[j] = info;
-          this.bottoni[j].style.color='color:red';
-          //this.toggle = !this.toggle;
           this.home=undefined;
         } else {
           document.getElementById('output').innerHTML = 'nome vuoto';
