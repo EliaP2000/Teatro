@@ -120,6 +120,7 @@ export class AppComponent {
 
   clean() {
     this.div=undefined;
+    this.home='';
   }
   cleanTeatro(){
     var cleaner = document.getElementById('bottoneRESET');
