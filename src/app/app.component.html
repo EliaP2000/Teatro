@@ -18,7 +18,7 @@
   <p>Scrivi il tuo nome e scegli il posto che vuoi</p>
   <br />
   <input id="info" #info type="text" />
-<p>
+<span>
   <table>
     <tr *ngFor="let row of [1, 2, 3, 4, 5, 6, 7]"> 
       <td *ngFor="let col of [1, 2, 3, 4, 5, 6, 7,8,9,10]; let counter = index">
@@ -28,8 +28,9 @@
       </td> 
     </tr>
   </table>
-</p>
-<p>
+</span>
+<br/>
+<span>
   <table>
   <tr *ngFor="let row of [1, 2, 3, 4]"> 
     <td *ngFor="let col of [1, 2, 3, 4, 5, 6]; let counter = index">
@@ -39,7 +40,7 @@
     </td> 
   </tr>
 </table>
-</p>
+</span>
 
 
 <p id="outputPrenotazione"></p>
