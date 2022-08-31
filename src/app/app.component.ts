@@ -79,10 +79,8 @@ export class AppComponent {
     if (key == '6a435159') {
       var conn = this.getValue(key);
       conn = this.setValue(key);
-      if(this.resultConnection==true){
-        document.getElementById('output').innerHTML = 'chiave corretta';
-        this.div = key;
-      }
+      document.getElementById('output').innerHTML = 'chiave corretta';
+      this.div = key;
     } else if(key == ''){
       document.getElementById('output').innerHTML = 'chiave non inserita';
     }
