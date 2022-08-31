@@ -50,11 +50,14 @@ export class AppComponent {
     }*/
   }
 
-  public selezionaPostoPlatea(info: string, Numplatea: any) {
+  public selezionaPostoPlatea(info: string, counter1: any, counter2: any) {
+    var NumplateaRighe = counter1.toString();
+    var NumplateaColonne = counter2.toString();
+    var sum = NumplateaRighe+NumplateaColonne;
     for (var j = 0; j < this.bottoni.length; j++) {
-      if (Numplatea == j) {
+      if (sum==j) {
         if(info!=''){
-          document.getElementById('outputPrenotazione').innerHTML = 'Posto in Platea ' + (Numplatea+1) + ' prenotato per ' + info;
+          document.getElementById('outputPrenotazione').innerHTML = 'Posto in Platea ' + (j+1) + ' prenotato per ' + info;
           this.bottoni[j] = info;
           this.home=undefined;
         } else {
@@ -64,18 +67,21 @@ export class AppComponent {
     }
   }
 
-  public selezionaPostoPalchi(info: string, Numpalchi: any) {
+  public selezionaPostoPalchi(info: string, counter1: any, counter2: any,) {
+    var NumpalchiRighe = counter1.toString();
+    var NumpalchiColonne = counter2.toString();
+    var sum = NumpalchiRighe+NumpalchiColonne;
     for (var j = 0; j < this.bottoni1.length; j++) {
-      if (Numpalchi == j) {
+      if (sum==j) {
         if(info!=''){
-          document.getElementById('outputPrenotazione').innerHTML = 'Posto sul Palco ' + (Numpalchi+1) + ' prenotato per ' + info;
+          document.getElementById('outputPrenotazione').innerHTML = 'Posto sul Palco ' + (j+1) + ' prenotato per ' + info;
           this.bottoni1[j] = info;
           this.home=undefined;
         }
         else{
           document.getElementById('outputPrenotazione').innerHTML = 'Casella Nome vuoto';
         }
-      }
+      
     }
   }
 
