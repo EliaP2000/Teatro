@@ -35,13 +35,15 @@ export class AppComponent {
     var sum = this.righe+this.colonne;
     for (var j = 0; j < this.bottoni.length; j++) {
       if (sum==j) {
-        if((info!='')&&(info!=this.bottoni[j])){
-          document.getElementById('outputPrenotazione').innerHTML = 'Posto in Platea ' + (j+1) + ' prenotato per ' + info;
-          this.bottoni[j] = info;
-          this.home=undefined;
+        if((info!='')&&(info!=this.bottoni[j])&&(typeof this.bottoni[j]!=='string')){
+            document.getElementById('outputPrenotazione').innerHTML = 'Posto in Platea ' + (j+1) + ' prenotato per ' + info;
+            this.bottoni[j] = info;
+            this.home=undefined;
         } else if(info==this.bottoni[j]){
-          document.getElementById('outputPrenotazione').innerHTML = 'Posto ' + (j+1) +' già prenotata da: ' + info;
-        } 
+            document.getElementById('outputPrenotazione').innerHTML = 'Hai già prenotato il posto ' + (j+1);
+        } else if((info!='')&&(typeof this.bottoni[j]==='string')){
+            document.getElementById('outputPrenotazione').innerHTML = 'Posto ' + (j+1) +' già prenotato da: ' + this.bottoni[j];
+        }
         else {
           document.getElementById('outputPrenotazione').innerHTML = 'Casella Nome vuoto';
         }
@@ -61,13 +63,16 @@ export class AppComponent {
       sum = sum-12;
     for (var j = 0; j < 36; j++) {
       if (sum==j) {
-        if((info!='')&&(info!=this.bottoni1[j])){
-          document.getElementById('outputPrenotazione').innerHTML = 'Posto sul Palco ' + (j+1) + ' prenotato per ' + info;
+        if((info!='')&&(info!=this.bottoni1[j])&&(typeof this.bottoni1[j]!=='string')){
+            document.getElementById('outputPrenotazione').innerHTML = 'Posto sul Palco ' + (j+1) + ' prenotato per ' + info;
           this.bottoni1[j] = info;
           this.home=undefined;
         } else if(info==this.bottoni1[j]){
-          document.getElementById('outputPrenotazione').innerHTML = 'Posto ' + (j+1) +' già prenotata da: ' + info;
-        } else{
+            document.getElementById('outputPrenotazione').innerHTML = 'Hai già prenotato il posto ' + (j+1);
+        } else if((info!='')&&(typeof this.bottoni1[j]==='string')){
+            document.getElementById('outputPrenotazione').innerHTML = 'Posto ' + (j+1) +' già prenotato da: ' + this.bottoni1[j];
+        }
+        else {
           document.getElementById('outputPrenotazione').innerHTML = 'Casella Nome vuoto';
         }
       }
