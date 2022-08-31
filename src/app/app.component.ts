@@ -22,6 +22,7 @@ export class AppComponent {
   bottoni1 = [];
   righe;
   colonne;
+  resultConnection;
   div: string;
   home: string = "";
   constructor() {
@@ -78,8 +79,10 @@ export class AppComponent {
     if (key == '6a435159') {
       var conn = this.getValue(key);
       conn = this.setValue(key);
-      document.getElementById('output').innerHTML = 'chiave corretta';
-      this.div = key;
+      if(this.resultConnection==true){
+        document.getElementById('output').innerHTML = 'chiave corretta';
+        this.div = key;
+      }
     } else if(key == ''){
       document.getElementById('output').innerHTML = 'chiave non inserita';
     }
@@ -111,15 +114,18 @@ export class AppComponent {
     })
     obs.subscribe({
       next: (res: AjaxResponse<any>) => {
-        console.log('Ok!');
+        this.resultConnection= true;
+        console.log('Ok!')
       },
       error: (err: AjaxError) => console.error(err.response),
     });
+    
   }
 
   clean() {
     this.div=undefined;
     this.home='';
+    this.resultConnection=false;
   }
   cleanTeatro(){
     var cleaner = document.getElementById('bottoneRESET');
