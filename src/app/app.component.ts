@@ -20,7 +20,8 @@ export class AppComponent {
   public style: CSSStyleDeclaration;
   bottoni = [];
   bottoni1 = [];
-  numbersArray = [];
+  righe;
+  colonne;
   div: string;
   home: string = "";
   constructor() {
@@ -30,29 +31,12 @@ export class AppComponent {
     this.bottoni1 = Array(24)
       .fill(0)
       .map((x, i) => i + 1);
-    this.numbersArray = Array(70)
-      .fill(0)
-      .map((x, i) => i + 1);
-  /*  for (var j = 0; j < this.bottoni.length; j++) {
-      var x = j;
-      if(x%10==0&&x!=0){
-        console.log(x)
-        var a = this.bottoni.splice(0,x);
-        var b = this.bottoni.splice(+x);
-      }
-    }
-    for (var j = 0; j < this.bottoni1.length; j++) {
-      if(j%10==0&&j!=0){
-        console.log(j)
-        var b = this.bottoni1.splice(j,-j)
-      }
-    }*/
   }
 
   public selezionaPostoPlatea(info: string, counter1: any, counter2: any) {
-    var NumplateaRighe = counter1.toString();
-    var NumplateaColonne = counter2.toString();
-    var sum = NumplateaRighe+NumplateaColonne;
+    this.righe = counter1.toString();
+    this.colonne = counter2.toString();
+    var sum = this.righe+this.colonne;
     for (var j = 0; j < this.bottoni.length; j++) {
       if (sum==j) {
         if(info!=''){
@@ -67,9 +51,9 @@ export class AppComponent {
   }
 
   public selezionaPostoPalchi(info: string, counter1: any, counter2: any,) {
-    var NumpalchiRighe = counter1.toString();
-    var NumpalchiColonne = counter2.toString();
-    var sum = NumpalchiRighe+NumpalchiColonne;
+    this.righe = counter1.toString();
+    this.colonne = counter2.toString();
+    var sum = this.righe+this.colonne;
     if(sum>=10&&sum<=15)
       sum = sum-4;
     else if(sum>=20&&sum<=25)
