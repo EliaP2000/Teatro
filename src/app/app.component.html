@@ -11,6 +11,7 @@
   <p id="output"></p>
 </div>
 
+
 <div *ngIf = "div !== undefined">
   <p>Scrivi il tuo nome e scegli il posto che vuoi</p>
   <br />
@@ -19,24 +20,22 @@
     <tr *ngFor="let row of [1, 2, 3, 4, 5, 6, 7]"> 
       <td *ngFor="let col of [1, 2, 3, 4, 5, 6, 7,8,9,10]; let counter = index">
         <button style="color:green" (click)="selezionaPostoPlatea(info.value, counter)">
-          {{numbersArray[(row - 1) * 10 + col - 1]}}
+          {{bottoni[(row - 1) * 10 + col - 1]}}
         </button>
       </td> 
     </tr>
   </table>
-  <button *ngFor="let platea of bottoni; let counter = index"  style="color:green"
-  (click)="selezionaPostoPlatea(info.value, counter)">
-    <p>
-      {{ platea }}
-    </p>
-  </button>
-<p>
-  <button *ngFor="let palchi of bottoni1; let counter = index" style="color:green" (click)="selezionaPostoPalchi(info.value, counter)">
-    <p>
-      {{ palchi }}
-    </p>
-  </button>
-</p>
+  <table>
+  <tr *ngFor="let row of [1, 2, 3, 4]"> 
+    <td *ngFor="let col of [1, 2, 3, 4, 5, 6]; let counter = index">
+      <button style="color:green" (click)="selezionaPostoPalchi(info.value, counter)">
+        {{bottoni1[(row - 1) * 10 + col - 1]}}
+      </button>
+    </td> 
+  </tr>
+</table>
+
+
 <p id="outputPrenotazione"></p>
   <div *ngIf = "home === undefined">
     <button (click)="clean()"> Concludi prenotazione </button>
