@@ -35,11 +35,14 @@ export class AppComponent {
     var sum = this.righe+this.colonne;
     for (var j = 0; j < this.bottoni.length; j++) {
       if (sum==j) {
-        if(info!=''){
+        if(info!=''&&info!=this.bottoni[j]){
           document.getElementById('outputPrenotazione').innerHTML = 'Posto in Platea ' + (j+1) + ' prenotato per ' + info;
           this.bottoni[j] = info;
           this.home=undefined;
-        } else {
+        } else if(info==this.bottoni[j]){
+          document.getElementById('outputPrenotazione').innerHTML = 'Posto ' + (j+1) +' già prenotata da: ' + info;
+        } 
+        else {
           document.getElementById('outputPrenotazione').innerHTML = 'Casella Nome vuoto';
         }
       }
