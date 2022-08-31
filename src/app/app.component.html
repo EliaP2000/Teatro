@@ -30,6 +30,13 @@
     </p>
   </button>
 </p>
+<table>
+<tr *ngFor="let row of [1, 2, 3, 4, 5, 6, 7]"> 
+  <td *ngFor="let col of [1, 2, 3, 4, 5, 6, 7,8,9,10]">
+  <div>{{numbersArray[(row - 1) * 10 + col - 1]}}</div>
+  </td> 
+</tr>
+</table>
 <p id="outputPrenotazione"></p>
   <div *ngIf = "home === undefined">
     <button (click)="clean()"> Concludi prenotazione </button>

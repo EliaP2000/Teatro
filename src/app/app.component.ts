@@ -21,6 +21,7 @@ export class AppComponent {
   public style: CSSStyleDeclaration;
   bottoni = [];
   bottoni1 = [];
+  numbersArray = [];
   div: string;
   home: string = "";
   constructor() {
@@ -28,6 +29,9 @@ export class AppComponent {
       .fill(0)
       .map((x, i) => i + 1);
     this.bottoni1 = Array(24)
+      .fill(0)
+      .map((x, i) => i + 1);
+    this.numbersArray = Array(70)
       .fill(0)
       .map((x, i) => i + 1);
   /*  for (var j = 0; j < this.bottoni.length; j++) {
