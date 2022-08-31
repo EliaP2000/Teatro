@@ -22,7 +22,6 @@ export class AppComponent {
   bottoni1 = [];
   righe;
   colonne;
-  resultConnection;
   div: string;
   home: string = "";
   constructor() {
@@ -112,18 +111,15 @@ export class AppComponent {
     })
     obs.subscribe({
       next: (res: AjaxResponse<any>) => {
-        this.resultConnection= true;
-        console.log('Ok!')
+        console.log('Ok!');
       },
       error: (err: AjaxError) => console.error(err.response),
     });
-    
   }
 
   clean() {
     this.div=undefined;
     this.home='';
-    this.resultConnection=false;
   }
   cleanTeatro(){
     var cleaner = document.getElementById('bottoneRESET');
