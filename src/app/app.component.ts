@@ -35,7 +35,7 @@ export class AppComponent {
     var sum = this.righe+this.colonne;
     for (var j = 0; j < this.bottoni.length; j++) {
       if (sum==j) {
-        if(info!=''&&info!=this.bottoni[j]){
+        if((info!='')&&(info!=this.bottoni[j])){
           document.getElementById('outputPrenotazione').innerHTML = 'Posto in Platea ' + (j+1) + ' prenotato per ' + info;
           this.bottoni[j] = info;
           this.home=undefined;
@@ -61,12 +61,13 @@ export class AppComponent {
       sum = sum-12;
     for (var j = 0; j < 36; j++) {
       if (sum==j) {
-        if(info!=''){
+        if((info!='')&&(info!=this.bottoni1[j])){
           document.getElementById('outputPrenotazione').innerHTML = 'Posto sul Palco ' + (j+1) + ' prenotato per ' + info;
           this.bottoni1[j] = info;
           this.home=undefined;
-        }
-        else{
+        } else if(info==this.bottoni1[j]){
+          document.getElementById('outputPrenotazione').innerHTML = 'Posto ' + (j+1) +' già prenotata da: ' + info;
+        } else{
           document.getElementById('outputPrenotazione').innerHTML = 'Casella Nome vuoto';
         }
       }
