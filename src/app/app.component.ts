@@ -5,10 +5,6 @@ import { ajax, AjaxResponse, AjaxRequest, AjaxError } from 'rxjs/ajax';
 const URL: string =
   'https://eu-central-1.aws.data.mongodb-api.com/app/kvaas-giwjg/endpoint';
 
-/*problemi da risolvere: colore della cella (facoltativo)
-                         posto già assegnato (facoltativo)
-*/
-
 @Component({
   selector: 'my-app',
   templateUrl: './app.component.html',
