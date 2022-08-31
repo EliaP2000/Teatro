@@ -71,7 +71,10 @@ export class AppComponent {
     var NumpalchiRighe = counter1.toString();
     var NumpalchiColonne = counter2.toString();
     var sum = NumpalchiRighe+NumpalchiColonne;
-    for (var j = 0; j < this.bottoni1.length; j++) {
+    console.log(NumpalchiRighe)
+    console.log(NumpalchiColonne)
+    console.log(sum)
+    for (var j = 0; j < 36; j++) {
       if (sum==j) {
         if(info!=''){
           document.getElementById('outputPrenotazione').innerHTML = 'Posto sul Palco ' + (j+1) + ' prenotato per ' + info;
