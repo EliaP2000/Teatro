@@ -70,6 +70,13 @@ export class AppComponent {
     var NumpalchiRighe = counter1.toString();
     var NumpalchiColonne = counter2.toString();
     var sum = NumpalchiRighe+NumpalchiColonne;
+    if(sum>=10&&sum<=15)
+      sum = sum-4;
+    else if(sum>=20&&sum<=25)
+      sum = sum-8;
+    else if(sum>=30&&sum<=35)
+      sum = sum-12;
+    console.log(sum)
     for (var j = 0; j < 36; j++) {
       if (sum==j) {
         if(info!=''){
