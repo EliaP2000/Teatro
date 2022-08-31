@@ -71,9 +71,6 @@ export class AppComponent {
     var NumpalchiRighe = counter1.toString();
     var NumpalchiColonne = counter2.toString();
     var sum = NumpalchiRighe+NumpalchiColonne;
-    console.log(NumpalchiRighe)
-    console.log(NumpalchiColonne)
-    console.log(sum)
     for (var j = 0; j < 36; j++) {
       if (sum==j) {
         if(info!=''){
