@@ -81,7 +81,7 @@ export class AppComponent {
         else{
           document.getElementById('outputPrenotazione').innerHTML = 'Casella Nome vuoto';
         }
-      
+      }
     }
   }
 
