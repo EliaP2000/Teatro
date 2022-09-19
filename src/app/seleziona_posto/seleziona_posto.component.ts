@@ -9,8 +9,6 @@ import { Component, Output, EventEmitter } from '@angular/core';
 export class seleziona_posto_component {
   @Output() seleziona_posto_event = new EventEmitter<string>();
 
-  constructor(private service: teatro_service) { }
-
   public selezionaPostoPlatea(info: string, counter1: any, counter2: any) {
     this.righe = counter1.toString();
     this.colonne = counter2.toString();
