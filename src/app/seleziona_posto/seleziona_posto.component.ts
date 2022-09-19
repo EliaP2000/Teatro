@@ -6,8 +6,8 @@ import { Component, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./seleziona_posto.component.css']
 })
 
-export class new_teatro_component {
-  @Output() new_teatro_event = new EventEmitter<string>();
+export class seleziona_posto_component {
+  @Output() seleziona_posto_event = new EventEmitter<string>();
 
   constructor(private service: teatro_service) { }
 

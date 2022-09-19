@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { add_nome_component } from './add_nome/add_nome.component';
+import { seleziona_posto_component } from './seleziona_posto/seleziona_posto.component';
 import { AppComponent } from './app.component';
 
 @NgModule({
