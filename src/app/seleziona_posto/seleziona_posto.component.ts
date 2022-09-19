@@ -1,10 +1,9 @@
 import { Component, Output, EventEmitter } from '@angular/core';
-import { teatro_service } from '../teatro.service';
 
 @Component({
-  selector: 'app-newteatro',
-  templateUrl: './new-teatro.component.html',
-  styleUrls: ['./new-teatro.component.css']
+  selector: 'app_seleziona_posto',
+  templateUrl: './seleziona_posto.component.html',
+  styleUrls: ['./seleziona_posto.component.css']
 })
 
 export class new_teatro_component {
