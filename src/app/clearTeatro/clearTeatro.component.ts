@@ -8,10 +8,12 @@ import { Component, Output, EventEmitter } from '@angular/core';
 
 export class clearTeatro_component {
   @Output() clear_event = new EventEmitter<string>();
-
+  div: string;
+  home: string = "";
   clean() {
     this.div=undefined;
     this.home='';
+    
   }
   cleanTeatro(){
     for (var j = 0; j < this.bottoni.length; j++) {
@@ -22,6 +24,6 @@ export class clearTeatro_component {
     }
   }
   pulizia(nominativo: string) {
-    this.clear_event.emit(nominativo);
+
   }
 }

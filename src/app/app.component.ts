@@ -18,8 +18,6 @@ export class AppComponent {
   bottoni1 = [];
   righe;
   colonne;
-  div: string;
-  home: string = "";
   constructor() {
     this.bottoni = Array(70)
       .fill(0)
