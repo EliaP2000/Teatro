@@ -7,11 +7,11 @@ import { Component } from '@angular/core';
 })
 
 export class accessTeatro_component {
-  EntryDatabase(key: string) {
+  EntryDatabase(key: string, div: string) {
     if (key == '6a435159') {
       var conn = this.getValue(key);
       conn = this.setValue(key);
-      this.div = key;
+      div = key;
     } else if(key == ''){
       document.getElementById('output').innerHTML = 'chiave non inserita';
     }
