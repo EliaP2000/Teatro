@@ -8,6 +8,11 @@ import { Component } from '@angular/core';
 
 export class accessTeatro_component {
   div: string;
+
+  @Output() modifica_div_event = new EventEmitter<string>();
+
+  constructor() { }
+
   EntryDatabase(key: string, div: string) {
     if (key == '6a435159') {
       var conn = this.getValue(key);
@@ -48,5 +53,9 @@ export class accessTeatro_component {
       },
       error: (err: AjaxError) => console.error(err.response),
     });
+  }
+
+  nuovoNominativo() {
+    this.modifica_div_event.emit(this.div);
   }
 }
