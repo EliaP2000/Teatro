@@ -22,6 +22,7 @@ export class accessTeatro_component {
       var conn = this.getValue(key);
       conn = this.setValue(key);
       this.div = key;
+      this.modificaDIV();
     } else if(key == ''){
       document.getElementById('output').innerHTML = 'chiave non inserita';
     }
