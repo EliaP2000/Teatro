@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app_accessTeatro',
@@ -55,7 +55,7 @@ export class accessTeatro_component {
     });
   }
 
-  nuovoNominativo() {
+  modificaDIV() {
     this.modifica_div_event.emit(this.div);
   }
 }
