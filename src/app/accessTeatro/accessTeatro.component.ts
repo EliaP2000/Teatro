@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'accessTeatro',
+  selector: 'app_accessTeatro',
   templateUrl: './accessTeatro.component.html',
   styleUrls: ['./accessTeatro.component.css']
 })
