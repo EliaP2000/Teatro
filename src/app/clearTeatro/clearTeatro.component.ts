@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'clearTeatro',
@@ -7,13 +7,11 @@ import { Component, Output, EventEmitter } from '@angular/core';
 })
 
 export class clearTeatro_component {
-  @Output() clear_event = new EventEmitter<string>();
   div: string;
   home: string = "";
   clean() {
     this.div=undefined;
     this.home='';
-    
   }
   cleanTeatro(){
     for (var j = 0; j < this.bottoni.length; j++) {
@@ -22,8 +20,5 @@ export class clearTeatro_component {
     for (var j = 0; j < this.bottoni1.length; j++) {
       this.bottoni1[j] = j;
     }
-  }
-  pulizia(nominativo: string) {
-
   }
 }
