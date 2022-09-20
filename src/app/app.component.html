@@ -8,12 +8,12 @@
 <!--CREARE DUE VARIABILI DIVERSE: UNA PER L'ACCESSO E UNA PER IL NOME = GUARDARE COME RIPORTARE IL RISULTATO DI accessTeatro IN QUESTA PAGINA PER POTER RIUTILIZZARE LA VARIABILE COME info E NON MODIFICARE NULLA DEL CODICE CORRENTE-->
 
 <div *ngIf = "div !== undefined">
-<app_add_nome></app_add_nome>
+<app_add_nome (aggiungi_nome_event)="utente = $event"></app_add_nome>
   <span>
     <table>
       <tr *ngFor="let row of [1, 2, 3, 4, 5, 6, 7]; let counter1 = index"> 
         <td *ngFor="let col of [1, 2, 3, 4, 5, 6, 7,8,9,10]; let counter2 = index">
-          <button style="color:green" (click)="selezionaPostoPlatea(info.value, counter1, counter2)">
+          <button style="color:green" (click)="selezionaPostoPlatea(utente.value, counter1, counter2)">
             {{bottoni[(row - 1) * 10 + col - 1]}}
           </button>
         </td> 
@@ -25,7 +25,7 @@
     <table>
     <tr *ngFor="let row of [1, 2, 3, 4]; let counter1 = index"> 
       <td *ngFor="let col of [1, 2, 3, 4, 5, 6]; let counter2 = index">
-        <button style="color:green" (click)="selezionaPostoPalchi(info.value, counter1, counter2)">
+        <button style="color:green" (click)="selezionaPostoPalchi(utente.value, counter1, counter2)">
           {{bottoni1[(row - 1) * 6 + col - 1]}}
         </button>
       </td> 

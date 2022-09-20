@@ -20,6 +20,7 @@ export class AppComponent {
   colonne;
   div: string;
   home: string = "";
+  utente;
   constructor() {
     this.bottoni = Array(70)
       .fill(0)
