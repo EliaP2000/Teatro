@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AppComponent } from '../app.component';
 
+
 @Component({
   selector: 'clearTeatro',
   templateUrl: './clearTeatro.component.html',
