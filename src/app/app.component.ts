@@ -18,6 +18,8 @@ export class AppComponent {
   bottoni1 = [];
   righe;
   colonne;
+  div: string;
+  home: string = "";
   constructor() {
     this.bottoni = Array(70)
       .fill(0)
@@ -36,6 +38,7 @@ export class AppComponent {
         if((info!='')&&(info!=this.bottoni[j])&&(typeof this.bottoni[j]!=='string')){
             document.getElementById('outputPrenotazione').innerHTML = 'Posto in Platea ' + (j+1) + ' prenotato per ' + info;
             this.bottoni[j] = info;
+            this.home=undefined;
         } else if(info==this.bottoni[j]){
             document.getElementById('outputPrenotazione').innerHTML = 'Hai già prenotato il posto ' + (j+1);
         } else if((info!='')&&(typeof this.bottoni[j]==='string')){
@@ -63,6 +66,7 @@ export class AppComponent {
         if((info!='')&&(info!=this.bottoni1[j])&&(typeof this.bottoni1[j]!=='string')){
             document.getElementById('outputPrenotazione').innerHTML = 'Posto sul Palco ' + (j+1) + ' prenotato per ' + info;
           this.bottoni1[j] = info;
+          this.home=undefined;
         } else if(info==this.bottoni1[j]){
             document.getElementById('outputPrenotazione').innerHTML = 'Hai già prenotato il posto ' + (j+1);
         } else if((info!='')&&(typeof this.bottoni1[j]==='string')){
@@ -79,6 +83,7 @@ export class AppComponent {
     if (key == '6a435159') {
       var conn = this.getValue(key);
       conn = this.setValue(key);
+      this.div = key;
     } else if(key == ''){
       document.getElementById('output').innerHTML = 'chiave non inserita';
     }
@@ -115,5 +120,16 @@ export class AppComponent {
       error: (err: AjaxError) => console.error(err.response),
     });
   }
-
+  clean() {
+    this.div=undefined;
+    this.home='';
+  }
+  cleanTeatro(){
+    for (var j = 0; j < this.bottoni.length; j++) {
+      this.bottoni[j] = j;
+    }
+    for (var j = 0; j < this.bottoni1.length; j++) {
+      this.bottoni1[j] = j;
+    }
+  }
 }
