@@ -83,6 +83,7 @@ export class AppComponent {
     this.div=undefined;
     this.home='';
   }
+
   cleanTeatro(){
     for (var j = 0; j < this.bottoni.length; j++) {
       this.bottoni[j] = j;
