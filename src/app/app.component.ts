@@ -121,17 +121,4 @@ export class AppComponent {
     });
   }
 
-  clean() {
-    this.div=undefined;
-    this.home='';
-  }
-  cleanTeatro(){
-    var cleaner = document.getElementById('bottoneRESET');
-    for (var j = 0; j < this.bottoni.length; j++) {
-      this.bottoni[j] = j;
-    }
-    for (var j = 0; j < this.bottoni1.length; j++) {
-      this.bottoni1[j] = j;
-    }
-  }
 }
