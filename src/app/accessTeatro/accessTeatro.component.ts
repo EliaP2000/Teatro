@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'accessTeatro',
@@ -7,13 +7,6 @@ import { Component, Output, EventEmitter } from '@angular/core';
 })
 
 export class accessTeatro_component {
-  @Output() aggiungi_nome_event = new EventEmitter<string>();
-
-  constructor() { }
-
-  nuovoNominativo(nominativo: string) {
-    this.aggiungi_nome_event.emit(nominativo);
-  }
   EntryDatabase(key: string) {
     if (key == '6a435159') {
       var conn = this.getValue(key);
