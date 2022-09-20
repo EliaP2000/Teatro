@@ -1,4 +1,9 @@
 import { Component, Output, EventEmitter } from '@angular/core';
+import { Observable } from 'rxjs';
+import { ajax, AjaxResponse, AjaxRequest, AjaxError } from 'rxjs/ajax';
+
+const URL: string =
+  'https://eu-central-1.aws.data.mongodb-api.com/app/kvaas-giwjg/endpoint';
 
 @Component({
   selector: 'app_accessTeatro',
@@ -13,7 +18,7 @@ export class accessTeatro_component {
 
   constructor() { }
 
-  EntryDatabase(key: string, div: string) {
+  EntryDatabase(key: string) {
     if (key == '6a435159') {
       var conn = this.getValue(key);
       conn = this.setValue(key);

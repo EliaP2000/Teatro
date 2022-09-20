@@ -1,9 +1,4 @@
 import { Component } from '@angular/core';
-import { Observable } from 'rxjs';
-import { ajax, AjaxResponse, AjaxRequest, AjaxError } from 'rxjs/ajax';
-
-const URL: string =
-  'https://eu-central-1.aws.data.mongodb-api.com/app/kvaas-giwjg/endpoint';
 
 @Component({
   selector: 'my-app',
