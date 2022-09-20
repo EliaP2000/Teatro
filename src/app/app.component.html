@@ -1,6 +1,6 @@
 <h1>Teatro</h1>
 <div *ngIf = "div === undefined">
-  <accessTeatro (accessTeatro_component)="modificaDIV(div)"></accessTeatro>
+  <accessTeatro></accessTeatro>
   <p>
     <button id="bottoneRESET" (click)="cleanTeatro()">RESET</button>
   </p>
@@ -9,6 +9,7 @@
 <!--IL TEATRO NON SI DEVE SPOSTARE DAL QUESTO FILE E COSì VALE PER IL TYPESCRIPT DEL TEATRO e neppure CLEAR-->
 <!--Inserire nel typescript app.component.ts i collegamenti con le altre cartelle quali il nome e l'accesso-->
 <!--CREARE DUE VARIABILI DIVERSE: UNA PER L'ACCESSO E UNA PER IL NOME = GUARDARE COME RIPORTARE IL RISULTATO DI accessTeatro IN QUESTA PAGINA PER POTER RIUTILIZZARE LA VARIABILE COME info E NON MODIFICARE NULLA DEL CODICE CORRENTE-->
+<!--INSERIRE NEL PROGETTO UN MODO PER PORTARE LE UTILIZZARE LE VARIABILI DI ACCESSTEATRO QUI E RICEVERE IL VALORE-->
 
 <div *ngIf = "div !== undefined">
 <app_add_nome (aggiungi_nome_event)="utente = $event"></app_add_nome>
