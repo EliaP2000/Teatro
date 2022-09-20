@@ -15,5 +15,5 @@ Nel codice HTML, invece, sono presenti una serie di div che suddividono la pagin
 Si ritorna al div iniziale con il pulsante di conclusione, che mostra nuovamente a video l'accesso e nasconde il teatro all'utente. 
 Per il teatro sono stati utilizzati, rispettivamente per la platea e per i palchi, 2 *ngFor affinché si potesse distribuire un singolo array su più righe e colonne in base alle specifiche del progetto stesso.
 
-
+(da rivedere https://stackblitz.com/edit/ssw-teatro-politeama?file=README.md)
 [Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-ivy-xheuby)
