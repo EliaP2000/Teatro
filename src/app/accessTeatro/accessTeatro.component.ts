@@ -1,5 +1,4 @@
 import { Component, Output, EventEmitter } from '@angular/core';
-import { Observable } from 'rxjs';
 import { ajax, AjaxResponse, AjaxRequest, AjaxError } from 'rxjs/ajax';
 
 const URL: string =
