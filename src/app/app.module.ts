@@ -7,8 +7,8 @@ import { accessTeatro_component } from './accessTeatro/accessTeatro.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent ],
-  bootstrap:    [ AppComponent, add_nome_component, accessTeatro_component ]
+  declarations: [ AppComponent, add_nome_component, accessTeatro_component  ],
+  bootstrap:    [ AppComponent ]
 })
 
 export class AppModule { }
