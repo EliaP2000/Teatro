@@ -1,6 +1,9 @@
 <h1>Teatro</h1>
 <div *ngIf = "div === undefined">
   <accessTeatro (accessTeatro_component)="modificaDIV(div)"></accessTeatro>
+  <p>
+    <button id="bottoneRESET" (click)="cleanTeatro()">RESET</button>
+  </p>
 </div>
 
 <!--IL TEATRO NON SI DEVE SPOSTARE DAL QUESTO FILE E COSì VALE PER IL TYPESCRIPT DEL TEATRO e neppure CLEAR-->
