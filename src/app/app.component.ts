@@ -15,7 +15,7 @@ export class AppComponent {
   colonne;
   div: string;
   home: string = "";
-  utente;
+  nominativo;
   constructor() {
     this.bottoni = Array(70)
       .fill(1)
