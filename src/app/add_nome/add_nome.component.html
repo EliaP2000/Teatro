@@ -1,2 +1,5 @@
+<h4>Inserisci il nominativo, premi PRENOTA e scegli il posto</h4>
+
 <input  placeholder="Inserisci nome..." type="text" size="15" #info (keyup.enter)="nuovoNominativo(info.value); info.value=''" />
 <button (click)="nuovoNominativo(info.value); info.value=''">Prenota</button>
+<br/>

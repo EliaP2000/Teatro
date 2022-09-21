@@ -12,7 +12,11 @@
 <!--INSERIRE NEL PROGETTO UN MODO PER PORTARE LE UTILIZZARE LE VARIABILI DI ACCESSTEATRO QUI E RICEVERE IL VALORE-->
 <!--NON SI PUO' RICHIAMARE UNA FUNZIONE DI UN ALTRO MODULO QUI MA SI PUò RICHIAMARE IL MODULO QUI E UTILIZZARE I METODI DA QUI CON UNA VARIABILE PASSATA DA QUI: QUI è IL PUNTO DI PARTENZA DI QUESTO CODICE-->
 <div *ngIf = "div !== undefined">
-<app_add_nome (aggiungi_nome_event)="nominativo = $event"></app_add_nome>
+
+  <app_add_nome (aggiungi_nome_event)="nominativo = $event"></app_add_nome>
+
+<br/>
+
   <span>
     <table>
       <tr *ngFor="let row of [1, 2, 3, 4, 5, 6, 7]; let counter1 = index"> 
