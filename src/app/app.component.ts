@@ -18,10 +18,10 @@ export class AppComponent {
   utente;
   constructor() {
     this.bottoni = Array(70)
-      .fill(0)
+      .fill(1)
       .map((x, i) => i + 1);
     this.bottoni1 = Array(24)
-      .fill(0)
+      .fill(1)
       .map((x, i) => i + 1);
   }
 
