@@ -16,11 +16,21 @@ export class accessTeatro_component {
 
   @Output() modifica_div_event = new EventEmitter<string>();
 
-  constructor() { }
+  constructor(private service: teatro_service) { }
 
   EntryDatabase(key: string) {
     if (key == '6a435159') {
       var conn = this.getValue(key);
+      /*this.service.get_spettacolo(key).subscribe({
+        next: (x: any) => {
+          const prenotazione = JSON.parse(x);
+          this.platea = prenotazione.slice(0, 7);
+          this.palchetto = prenotazione.slice(7);
+          this.chiave_teatro = chiave;
+          this.show_el.add_nome = true;
+        },
+        error: (err: any) => console.error(`Errore nell'observer: ${JSON.stringify(err)}`)
+      });*/
       conn = this.setValue(key);
       this.div = key;
       conn = this.modificaDIV();
