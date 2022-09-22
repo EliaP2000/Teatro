@@ -22,8 +22,7 @@ export class accessTeatro_component {
   EntryDatabase(key: string) {
     if(key!=''){
       this.service.get_teatro(key).subscribe({
-        next: (x: any) => {
-          const prenotazione = JSON.parse(x);
+        next: () => {
           this.chiave_teatro = key;
           console.log(this.chiave_teatro);
         },
