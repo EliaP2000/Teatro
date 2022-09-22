@@ -14,6 +14,7 @@ const URL: string =
 export class accessTeatro_component {
   div: string;
   chiave_teatro: string = "";
+  CHIAVE: string = '6a435159';
 
   @Output() modifica_div_event = new EventEmitter<string>();
 
@@ -29,7 +30,7 @@ export class accessTeatro_component {
         },
         error: (err: any) => console.error(`Errore nell'observer: ${JSON.stringify(err)}`)
       });
-      this.service.set_teatro(key).subscribe({
+      this.service.set_teatro(key, this.CHIAVE).subscribe({
         next: () => {
           this.div=key;
           console.log('Ok!');
