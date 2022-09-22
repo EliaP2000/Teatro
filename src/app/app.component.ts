@@ -17,7 +17,8 @@ export class AppComponent {
   div: string;
   home: string = "";
   nominativo = "";
-  constructor() {
+  chiave_teatro = "";
+  constructor(private service: teatro_service) {
     this.bottoni = Array(70)
       .fill(1)
       .map((x, i) => i + 1);
@@ -30,17 +31,17 @@ export class AppComponent {
     this.righe = counter1.toString();
     this.colonne = counter2.toString();
     var sum = this.righe+this.colonne;
+    const teatroIntero = this.bottoni.concat(this.bottoni1);
     for (var j = 0; j < this.bottoni.length; j++) {
       if (sum==j) {
         if((this.nominativo!='')&&(this.nominativo!=this.bottoni[j])&&(typeof this.bottoni[j]!=='string')){
-            document.getElementById('outputPrenotazione').innerHTML = 'Posto in Platea ' + (j+1) + ' prenotato per ' + this.nominativo;
-           /*this.service.set_spettacolo(this.chiave_teatro, prenotazione).subscribe({
+           this.service.set_Postiteatro(this.chiave_teatro, teatroIntero).subscribe({
               next: () => {
-                this.info_prenotazione = `Il posto P${riga + 1}-${colonna + 1} ${dove} è stato prenotato da ${this.utente} con successo! 🎥`;
-                this.utente = '';
+                document.getElementById('outputPrenotazione').innerHTML = 'Posto in Platea ' + (j+1) + ' prenotato per ' + this.nominativo;
+                this.nominativo = '';
               },
               error: (err) => console.error(`Errore nell'observer: ${JSON.stringify(err)}`),
-            });*/
+            });
             this.bottoni[j] = this.nominativo;
             this.home=undefined;
         } else if(this.nominativo==this.bottoni[j]){
