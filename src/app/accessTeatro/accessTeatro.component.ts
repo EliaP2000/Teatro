@@ -1,6 +1,5 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 import { teatro_service } from '../teatro.service';
-import { ajax, AjaxResponse, AjaxError } from 'rxjs/ajax';
 
 const URL: string =
   'https://eu-central-1.aws.data.mongodb-api.com/app/kvaas-giwjg/endpoint';
@@ -21,27 +20,25 @@ export class accessTeatro_component {
   constructor(private service: teatro_service) { }
 
   EntryDatabase(key: string) {
-    this.service.get_teatro(key).subscribe({
-      next: (x: any) => {
-        const prenotazione = JSON.parse(x);
-        this.chiave_teatro = key;
-        console.log(this.chiave_teatro);
-      },
-      error: (err: any) => console.error(`Errore nell'observer: ${JSON.stringify(err)}`)
-    });
-    this.service.set_teatro(key, this.CHIAVE).subscribe({
-      next: () => {
-        this.div=key;
-        console.log('Ok!');
-        this.modifica_div_event.emit(this.div);
-      },
-      error: err => console.error(`Errore nell'observer: ${JSON.stringify(err)}`)
-    });
-    if(key == ''){
+    if(key!=''){
+      this.service.get_teatro(key).subscribe({
+        next: (x: any) => {
+          const prenotazione = JSON.parse(x);
+          this.chiave_teatro = key;
+          console.log(this.chiave_teatro);
+        },
+        error: (err: any) => console.error(`Errore nell'observer: ${JSON.stringify(err)}`)
+      });
+      this.service.set_teatro(key, this.CHIAVE).subscribe({
+        next: () => {
+          this.div=key;
+          console.log('Ok!');
+          this.modifica_div_event.emit(this.div);
+        },
+        error: err => console.error(`Errore nell'observer: ${JSON.stringify(err)}`)
+      });
+    }else{
       document.getElementById('output').innerHTML = 'chiave non inserita';
-    }
-    else{
-      document.getElementById('output').innerHTML = 'chiave errata';
     }
   }
 }
