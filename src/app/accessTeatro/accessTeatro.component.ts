@@ -25,17 +25,18 @@ export class accessTeatro_component {
         next: (x: any) => {
           const prenotazione = JSON.parse(x);
           this.chiave_teatro = key;
-          this.show_el.add_nome = true;
+          console.log(this.chiave_teatro);
         },
         error: (err: any) => console.error(`Errore nell'observer: ${JSON.stringify(err)}`)
       });
       this.service.set_spettacolo(key, prenotazione).subscribe({
         next: () => {
-          this.div=key,
-          this.modifica_div_event.emit(this.div),
+          this.div=key;
+          console.log('Ok!');
+          this.modifica_div_event.emit(this.div);
         },
         error: err => console.error(`Errore nell'observer: ${JSON.stringify(err)}`)
-      })
+      });
     } else if(key == ''){
       document.getElementById('output').innerHTML = 'chiave non inserita';
     }
