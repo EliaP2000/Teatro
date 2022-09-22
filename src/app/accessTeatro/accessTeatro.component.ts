@@ -13,6 +13,7 @@ const URL: string =
 
 export class accessTeatro_component {
   div: string;
+  chiave_teatro: string = "";
 
   @Output() modifica_div_event = new EventEmitter<string>();
 
@@ -20,20 +21,21 @@ export class accessTeatro_component {
 
   EntryDatabase(key: string) {
     if (key == '6a435159') {
-      var conn = this.getValue(key);
-      /*this.service.get_spettacolo(key).subscribe({
+      this.service.get_spettacolo(key).subscribe({
         next: (x: any) => {
           const prenotazione = JSON.parse(x);
-          this.platea = prenotazione.slice(0, 7);
-          this.palchetto = prenotazione.slice(7);
-          this.chiave_teatro = chiave;
+          this.chiave_teatro = key;
           this.show_el.add_nome = true;
         },
         error: (err: any) => console.error(`Errore nell'observer: ${JSON.stringify(err)}`)
-      });*/
-      conn = this.setValue(key);
-      this.div = key;
-      conn = this.modificaDIV();
+      });
+      this.service.set_spettacolo(key, prenotazione).subscribe({
+        next: () => {
+          this.div=key,
+          this.modifica_div_event.emit(this.div),
+        },
+        error: err => console.error(`Errore nell'observer: ${JSON.stringify(err)}`)
+      })
     } else if(key == ''){
       document.getElementById('output').innerHTML = 'chiave non inserita';
     }
@@ -58,36 +60,4 @@ export class accessTeatro_component {
     error: err => console.error(`Errore nell'observer: ${JSON.stringify(err)}`)
   })*/
 
-  getValue(key: string) {
-    const obs = ajax({
-      method: 'GET',
-      url: URL + '/get?key=' + key,
-      crossDomain: true,
-    });
-    obs.subscribe({
-      next: (res: AjaxResponse<any>) => {
-        console.log(res.response);
-      },
-      error: (err: AjaxError) => console.error(err.response),
-    });
-  }
-
-  setValue(key: string) {
-    const obs = ajax({
-      method: 'POST',
-      url:URL + '/set?key=' + key,
-      crossDomain: true,
-      body: '6a435159',
-    })
-    obs.subscribe({
-      next: (res: AjaxResponse<any>) => {
-        console.log('Ok!');
-      },
-      error: (err: AjaxError) => console.error(err.response),
-    });
-  }
-
-  modificaDIV() {
-    this.modifica_div_event.emit(this.div);
-  }
 }
