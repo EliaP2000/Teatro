@@ -1,4 +1,5 @@
 import { Component, Output, EventEmitter } from '@angular/core';
+import { teatro_service } from '../teatro.service';
 import { ajax, AjaxResponse, AjaxError } from 'rxjs/ajax';
 
 const URL: string =

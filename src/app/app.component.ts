@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { teatro_service } from './teatro.service';
 
 @Component({
   selector: 'my-app',
