@@ -31,6 +31,11 @@ export class accessTeatro_component {
     }
   }
 
+  /*this.service.set_spettacolo(key, prenotazione).subscribe({
+    next: () => this.new_teatro_event.emit(key),
+    error: err => console.error(`Errore nell'observer: ${JSON.stringify(err)}`)
+  })*/
+
   getValue(key: string) {
     const obs = ajax({
       method: 'GET',
