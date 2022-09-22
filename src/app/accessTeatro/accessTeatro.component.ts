@@ -21,7 +21,7 @@ export class accessTeatro_component {
 
   EntryDatabase(key: string) {
     if (key == '6a435159') {
-      this.service.get_spettacolo(key).subscribe({
+      this.service.get_teatro(key).subscribe({
         next: (x: any) => {
           const prenotazione = JSON.parse(x);
           this.chiave_teatro = key;
@@ -29,7 +29,7 @@ export class accessTeatro_component {
         },
         error: (err: any) => console.error(`Errore nell'observer: ${JSON.stringify(err)}`)
       });
-      this.service.set_spettacolo(key, prenotazione).subscribe({
+      this.service.set_teatro(key).subscribe({
         next: () => {
           this.div=key;
           console.log('Ok!');

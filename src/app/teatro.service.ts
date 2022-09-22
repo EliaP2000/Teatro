@@ -11,11 +11,15 @@ export class teatro_service {
 
   constructor(private http: HttpClient) { }
 
-  get_spettacolo(chiave: string): Observable<string> {
+  get_teatro(chiave: string): Observable<string> {
     return this.http.get<string>(`${this.URL}get?key=${chiave}`);
   }
 
-  set_spettacolo(chiave: string, teatro: any[]): Observable<string> {
+  set_teatro(chiave: string): Observable<string> {
+    return this.http.post<string>(`${this.URL}set?key=${chiave}`, teatro)
+  }
+  
+  set_Postiteatro(chiave: string, teatro: any[]): Observable<string> {
     return this.http.post<string>(`${this.URL}set?key=${chiave}`, teatro)
   }
 }
