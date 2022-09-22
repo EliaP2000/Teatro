@@ -33,6 +33,13 @@ export class AppComponent {
       if (sum==j) {
         if((this.nominativo!='')&&(this.nominativo!=this.bottoni[j])&&(typeof this.bottoni[j]!=='string')){
             document.getElementById('outputPrenotazione').innerHTML = 'Posto in Platea ' + (j+1) + ' prenotato per ' + this.nominativo;
+           /*this.service.set_spettacolo(this.chiave_teatro, prenotazione).subscribe({
+              next: () => {
+                this.info_prenotazione = `Il posto P${riga + 1}-${colonna + 1} ${dove} è stato prenotato da ${this.utente} con successo! 🎥`;
+                this.utente = '';
+              },
+              error: (err) => console.error(`Errore nell'observer: ${JSON.stringify(err)}`),
+            });*/
             this.bottoni[j] = this.nominativo;
             this.home=undefined;
         } else if(this.nominativo==this.bottoni[j]){

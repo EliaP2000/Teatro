@@ -30,6 +30,17 @@ export class accessTeatro_component {
       document.getElementById('output').innerHTML = 'chiave errata';
     }
   }
+  
+  /*this.service.get_spettacolo(chiave).subscribe({
+    next: (x: any) => {
+      const prenotazione = JSON.parse(x);
+      this.platea = prenotazione.slice(0, 7);
+      this.palchetto = prenotazione.slice(7);
+      this.chiave_teatro = chiave;
+      this.show_el.add_nome = true;
+    },
+    error: (err: any) => console.error(`Errore nell'observer: ${JSON.stringify(err)}`)
+  });*/
 
   /*this.service.set_spettacolo(key, prenotazione).subscribe({
     next: () => this.new_teatro_event.emit(key),
