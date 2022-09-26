@@ -19,7 +19,7 @@ export class teatro_service {
     return this.http.post<string>(`${this.URL}set?key=${chiave}`,chiave_accesso);
   }
   
-/*  set_Postiteatro(chiave: string, teatro: any[]): Observable<string> {
+  set_Postiteatro(chiave: string, teatro: any[]): Observable<string> {
     return this.http.post<string>(`${this.URL}set?key=${chiave}`, teatro);
-  }*/
+  }
 }
