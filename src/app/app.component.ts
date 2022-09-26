@@ -35,14 +35,14 @@ export class AppComponent {
     for (var j = 0; j < this.bottoni.length; j++) {
       if (sum==j) {
         if((this.nominativo!='')&&(this.nominativo!=this.bottoni[j])&&(typeof this.bottoni[j]!=='string')){
-          /*this.chiave_teatro = this.div;
+          this.chiave_teatro = this.div;
            this.service.set_Postiteatro(this.chiave_teatro, teatroIntero).subscribe({
               next: () => {
                 document.getElementById('outputPrenotazione').innerHTML = 'Posto in Platea ' + (j+1) + ' prenotato per ' + this.nominativo;
-                */this.bottoni[j] = this.nominativo;/*
+                this.bottoni[j] = this.nominativo;
               },
               error: (err) => console.error(`Errore nell'observer: ${JSON.stringify(err)}`),
-            });*/
+            });
             this.home=undefined;
         } else if(this.nominativo==this.bottoni[j]){
             document.getElementById('outputPrenotazione').innerHTML = 'Hai già prenotato il posto ' + (j+1);
