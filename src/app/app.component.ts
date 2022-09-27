@@ -51,7 +51,7 @@ export class AppComponent {
             document.getElementById('outputPrenotazione').innerHTML = 'Posto ' + (j+1) +' già prenotato da: ' + this.bottoni[j];
         }
         else {
-          document.getElementById('outputPrenotazione').innerHTML = 'Casella Nome vuoto';
+          document.getElementById('outputPrenotazione').innerHTML = 'Non hai inserito il nome per la prenotazione';
         }
       }
     }
