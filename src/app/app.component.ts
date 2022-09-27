@@ -42,7 +42,10 @@ export class AppComponent {
         });
         this.home=undefined;
     } else if((this.nominativo=='')&& this.bottoni[sum]){
-        document.getElementById('outputPrenotazione').innerHTML = 'Posto ' + ' già prenotato da: ' + this.bottoni[sum];
+        if(typeof this.bottoni[sum]==="number")
+        document.getElementById('outputPrenotazione').innerHTML = 'Posto libero - Inserisci il nominativo';
+          else
+          document.getElementById('outputPrenotazione').innerHTML = 'Posto ' + ' già prenotato da: ' + this.bottoni[sum];
     } else {
       document.getElementById('outputPrenotazione').innerHTML = 'Posto libero - Inserisci il nominativo';
     }
