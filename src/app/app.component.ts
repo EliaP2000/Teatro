@@ -49,6 +49,7 @@ export class AppComponent {
     } else {
       document.getElementById('outputPrenotazione').innerHTML = 'Posto libero - Inserisci il nominativo';
     }
+    //this.nominativo = '';
   }
 
   public selezionaPostoPalchi(counter1: any, counter2: any,) {
