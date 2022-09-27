@@ -32,22 +32,21 @@ export class AppComponent {
     this.colonne = counter2.toString();
     var sum = this.righe+this.colonne;
     const teatroIntero = this.bottoni.concat(this.bottoni1);
-    for (var j = 0; j < this.bottoni.length; j++) {
-      if (sum==j) {
-        if((this.nominativo!='')&&(this.nominativo!=this.bottoni[j])&&(typeof this.bottoni[j]!=='string')){
-          this.chiave_teatro = this.div;
-          document.getElementById('outputPrenotazione').innerHTML = 'Posto in Platea ' + (j+1) + ' prenotato per ' + this.nominativo;
-          this.bottoni[j] = this.nominativo;
-          this.home=undefined;
-          this.nominativo = "";
-        } else if(this.nominativo==this.bottoni[j]){
-            document.getElementById('outputPrenotazione').innerHTML = 'Hai già prenotato il posto ' + (j+1);
-        } else if((this.nominativo!='')&&(typeof this.bottoni[j]==='string')){
-            document.getElementById('outputPrenotazione').innerHTML = 'Posto ' + (j+1) +' già prenotato da: ' + this.bottoni[j];
-        } else {
-          document.getElementById('outputPrenotazione').innerHTML = 'Non hai inserito il nome per la prenotazione';
-        }
-      }
+    if((this.nominativo!='')&&(typeof this.bottoni!=='string')){
+      this.chiave_teatro = this.div;
+        this.service.set_Postiteatro(this.chiave_teatro, teatroIntero).subscribe({
+          next: () => {
+            document.getElementById('outputPrenotazione').innerHTML = 'Posto in Platea ' + sum + ' prenotato per ' + this.nominativo;
+            //this.bottoni = this.nominativo;
+          },
+          error: (err) => console.error(`Errore nell'observer: ${JSON.stringify(err)}`),
+        });
+        this.home=undefined;
+        this.nominativo = "";
+    } else if((this.nominativo!='')&&(typeof this.bottoni==='string')){
+        document.getElementById('outputPrenotazione').innerHTML = 'Posto ' + ' già prenotato da: ' + this.bottoni;
+    } else {
+      document.getElementById('outputPrenotazione').innerHTML = 'Non hai inserito il nome per la prenotazione';
     }
   }
 
