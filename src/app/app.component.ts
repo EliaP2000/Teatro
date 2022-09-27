@@ -49,8 +49,7 @@ export class AppComponent {
             document.getElementById('outputPrenotazione').innerHTML = 'Hai già prenotato il posto ' + (j+1);
         } else if((this.nominativo!='')&&(typeof this.bottoni[j]==='string')){
             document.getElementById('outputPrenotazione').innerHTML = 'Posto ' + (j+1) +' già prenotato da: ' + this.bottoni[j];
-        }
-        else {
+        } else {
           document.getElementById('outputPrenotazione').innerHTML = 'Non hai inserito il nome per la prenotazione';
         }
       }
