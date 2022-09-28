@@ -98,13 +98,4 @@ export class AppComponent {
     this.home='';
     this.nominativo='';
   }
-
-  cleanTeatro(){
-    for (var j = 0; j < this.bottoni.length; j++) {
-      this.bottoni[j] = j+1;
-    }
-    for (var j = 0; j < this.bottoni1.length; j++) {
-      this.bottoni1[j] = j+1;
-    }
-  }
 }

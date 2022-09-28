@@ -1,9 +1,6 @@
 <h1>Teatro</h1>
 <div *ngIf = "div === undefined">
   <app_accessTeatro (modifica_div_event)="div = $event"></app_accessTeatro>
-  <p>
-    <button id="bottoneRESET" (click)="cleanTeatro()">RESET</button>
-  </p>
 </div>
 
 <div *ngIf = "div !== undefined">
