@@ -32,24 +32,24 @@ export class AppComponent {
       this.righe = counter1.toString();
     }
     this.colonne = counter2.toString();
-    var sum = this.righe+this.colonne;
-    var sumPostoScelto = this.righe+((counter2+1).toString());
+    var PostoSelezionato_Array = this.righe+this.colonne;
+    var PostoScelto_HTML = this.righe+((counter2+1).toString());
     const teatroIntero = this.bottoni.concat(this.bottoni1);
     if(this.nominativo!=''){
-      this.bottoni[sum] = this.nominativo;
+      this.bottoni[PostoSelezionato_Array] = this.nominativo;
       this.chiave_teatro = this.div;
         this.service.set_Postiteatro(this.chiave_teatro, teatroIntero).subscribe({
           next: () => {
-            document.getElementById('outputPrenotazione').innerHTML = 'Posto in Platea ' + sumPostoScelto + ' prenotato per ' + this.nominativo;
+            document.getElementById('outputPrenotazione').innerHTML = 'Posto in Platea ' + PostoScelto_HTML + ' prenotato per ' + this.nominativo;
           },
           error: (err) => console.error(`Errore nell'observer: ${JSON.stringify(err)}`),
         });
         this.home=undefined;
-    } else if((this.nominativo=='')&& this.bottoni[sum]){
-        if(typeof this.bottoni[sum]==="number")
+    } else if((this.nominativo=='')&& this.bottoni[PostoSelezionato_Array]){
+        if(typeof this.bottoni[PostoSelezionato_Array]==="number")
         document.getElementById('outputPrenotazione').innerHTML = 'Posto libero - Inserisci il nominativo';
           else
-          document.getElementById('outputPrenotazione').innerHTML = 'Posto ' + ' già prenotato da: ' + this.bottoni[sum];
+          document.getElementById('outputPrenotazione').innerHTML = 'Posto ' + ' già prenotato da: ' + this.bottoni[PostoSelezionato_Array];
     } else {
       document.getElementById('outputPrenotazione').innerHTML = 'Posto libero - Inserisci il nominativo';
     }
