@@ -26,7 +26,11 @@ export class AppComponent {
   }
 
   public selezionaPostoPlatea(counter1: any, counter2: any) {
-    this.righe = counter1.toString();
+    if(counter1>=1){
+      this.righe = '0' + ((counter1+1).toString());
+    }else{
+      this.righe = counter1.toString();
+    }
     this.colonne = counter2.toString();
     var sum = this.righe+this.colonne;
     var sumPostoScelto = this.righe+((counter2+1).toString());
