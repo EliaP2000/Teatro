@@ -45,6 +45,7 @@ export class AppComponent {
           error: (err) => console.error(`Errore nell'observer: ${JSON.stringify(err)}`),
         });
         this.home=undefined;
+        console.log(this.bottoni)
     } 
     
     else if((this.nominativo!='')&&(this.bottoni[PostoSelezionato_Array]!=undefined)&&(this.bottoni[PostoSelezionato_Array]==this.nominativo)){
@@ -100,10 +101,10 @@ export class AppComponent {
 
   cleanTeatro(){
     for (var j = 0; j < this.bottoni.length; j++) {
-      this.bottoni[j] = j;
+      this.bottoni[j] = j+1;
     }
     for (var j = 0; j < this.bottoni1.length; j++) {
-      this.bottoni1[j] = j;
+      this.bottoni1[j] = j+1;
     }
   }
 }
