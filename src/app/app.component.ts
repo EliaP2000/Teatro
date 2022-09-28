@@ -99,7 +99,7 @@ export class AppComponent {
     this.nominativo='';
   }
 
-  cambiocolore(posto: string): string {
+ /* cambiocolore(posto: string): string {
     return posto !== '' ? "rgb(213, 30, 30)" : "rgb(62, 174, 62)";
-  }
+  }*/
 }
