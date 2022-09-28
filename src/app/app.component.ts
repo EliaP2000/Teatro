@@ -27,7 +27,7 @@ export class AppComponent {
 
   public selezionaPostoPlatea(counter1: any, counter2: any) {
     if(counter1>=1){
-      this.righe = '0' + ((counter1+1).toString());
+      this.righe = '0' + ((counter1).toString());
     }else{
       this.righe = counter1.toString();
     }
