@@ -36,7 +36,7 @@ export class AppComponent {
     var PostoScelto_HTML = counter1+((counter2+1).toString());
     const teatroIntero = this.bottoni.concat(this.bottoni1);
     if(this.nominativo!=''){
-      this.bottoni[PostoSelezionato_Array] = this.nominativo;
+      this.bottoni[ ] = this.nominativo;
       this.chiave_teatro = this.div;
         this.service.set_Postiteatro(this.chiave_teatro, teatroIntero).subscribe({
           next: () => {
