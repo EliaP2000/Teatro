@@ -45,11 +45,11 @@ export class AppComponent {
           error: (err) => console.error(`Errore nell'observer: ${JSON.stringify(err)}`),
         });
         this.home=undefined;
-        
+
     } else if(this.nominativo==this.bottoni[PostoSelezionato_Array]){
       document.getElementById('outputPrenotazione').innerHTML = 'Hai già prenotato questo posto';
 
-    } else if((this.nominativo!='')&&(typeof this.bottoni1[PostoSelezionato_Array]==='string')){
+    } else if((this.nominativo!='')&&(this.nominativo!=this.bottoni[PostoSelezionato_Array])&&(typeof this.bottoni1[PostoSelezionato_Array]==='string')){
       document.getElementById('outputPrenotazione').innerHTML = 'Posto ' + ' già prenotato da: ' + this.bottoni[PostoSelezionato_Array];
 
     } else {
