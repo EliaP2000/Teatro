@@ -25,7 +25,7 @@
     <table>
     <tr *ngFor="let row of [1, 2, 3, 4]; let counter1 = index"> 
       <td *ngFor="let col of [1, 2, 3, 4, 5, 6]; let counter2 = index">
-        <button style="color:green" (click)="selezionaPostoPalchi(counter1, counter2)">
+        <button style="background:{{cambiocolore(col)}}" (click)="selezionaPostoPalchi(counter1, counter2)">
           {{bottoni1[(row - 1) * 6 + col - 1]}}
         </button>
       </td> 
