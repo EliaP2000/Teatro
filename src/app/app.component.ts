@@ -72,7 +72,6 @@ export class AppComponent {
           error: (err) => console.error(`Errore nell'observer: ${JSON.stringify(err)}`),
         });
         this.home=undefined;
-        console.log(array)
     } 
     else if((this.nominativo!='')&&(array[PostoInArray]!=undefined)&&(array[PostoInArray]==this.nominativo)){
       document.getElementById('outputPrenotazione').innerHTML = 'Hai già prenotato questo posto';
