@@ -64,7 +64,10 @@ export class AppComponent {
       this.chiave_teatro = this.div;
         this.service.set_Postiteatro(this.chiave_teatro, teatroIntero).subscribe({
           next: () => {
-            document.getElementById('outputPrenotazione').innerHTML = 'Posto sul Palco ' + PostoInHTML + ' prenotato per ' + this.nominativo;
+            if(array==this.bottoni)
+              document.getElementById('outputPrenotazione').innerHTML = 'Posto scelto in Platea' + PostoInHTML + ' prenotato per ' + this.nominativo;
+            else
+              document.getElementById('outputPrenotazione').innerHTML = 'Posto scelto sul Palco' + PostoInHTML + ' prenotato per ' + this.nominativo;
           },
           error: (err) => console.error(`Errore nell'observer: ${JSON.stringify(err)}`),
         });
