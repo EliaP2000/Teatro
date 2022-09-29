@@ -2,21 +2,9 @@
 
 Elia Pappalardo 596506
 
-Il codice è strutturato su tre pagine differenti contenute all'interno della cartella app: app.component.css, app.component.html e app.component.ts. 
+Il codice cerca di riprodurre un teatro al quale l'utente puà accedere attraverso una chiave già predefinita. L'utente, dopo aver eseguito l'accesso, è in grado di poter visualizzare la struttura del teatro con i posti. Per poter prenotare un posto bisogna inserire il proprio nome nella barra in alto, premere sul bottone "prenota" ed infine scegliere il posto. L'utente può scegliere più posti e anche con più nomi diversi ma una volta scelto non è possibile modificare la scelta. Per terminare la prenotazione basta premere il bottone "concludi prenotazione". 
 
-Per quanto riguarda il css non ci sono molte cose da dire tranne per il fatto di aver stabilito il font del tag html p (paragrafo). 
-
-Gli elementi più interessanti sono Typescript e HTML. 
-
-Il codice Typescript è strutturato nelle classi AppComponent, accessTeatro_component e add_nome_component 
-
---da riscrivere utilizzando parte già scritta qui--
-ed è strutturato su più funzioni pubbliche e su un costruttore per la creazione del Teatro. In quest'ultimo, appunto, ho inserito due array: uno per la platea e uno per i palchi. Le funzioni sono molteplici: due per l'inserimento nell'array del nominativo della persona che sta prenotando un determinato posto, cliccando sul bottone di riferimento dell'array (rispettivamente una per la platea e una per i palchi); tre per l'accesso al teatro ed in particolar modo una per la get e una per la set della chiave per poter accedere al database dove risiede il teatro, su cui si andrà a prenotare i posti; due rispettivamente per la conclusione della prenotazione dei posti e per il reset totale del teatro e, quindi, la cancellazione dei nominativi presenti nei due array del Teatro. 
-Per l'inserimento negli array vi è la possibilità di immettere il nome quante volte lo si volesse, a patto che il posto non fosse già stato occupato da un'altra persona in precedenza. E' possibile prenotare anche con diversi nomi dallo stesso utente, ma una volta inserito, il nome non può più essere modificato. Nella funzione dei palchi, inoltre, sono presenti una serie di If perché, essendo un array di 24 posti (che non vengono rappresentati tutti di seguito, in maniera lineare, ma ogni 6 posti con una nuova riga), l'inserimento riusciva difficile. Ciò non riuscendo a trovare perfettamente le celle dell'array dato dall'utilizzo di due *ngFor in HTMTL affinché si potesse disporre l'array su più righe e colonne.
-
-Nel codice HTML, invece, sono presenti una serie di div che suddividono la pagina e che, attraverso il Typescript, viene resa dinamica mostrando o non mostrando a video il div che deve essere utilizzato. Il primo riguarda l'accesso nel teatro, che può essere eseguito solo attraverso la chiave di accesso al database. Inserendola il div di accesso può venir "spento" e venir "acceso" quello del teatro, contenente la casella di inserimento per il nominativo e il teatro (platea e palchi). Vengono mostrati a video successivamente: il testo di avvenuta/non avvenuta/errore prenotazione con il relativo posto, il nominativo (inserito anche come indice nell'array) e il pulsante per concludere la prenotazione, che rimanda alla pagina di accesso del teatro.
-Si ritorna al div iniziale con il pulsante di conclusione, che mostra nuovamente a video l'accesso e nasconde il teatro all'utente. 
-Per il teatro sono stati utilizzati, rispettivamente per la platea e per i palchi, 2 *ngFor affinché si potesse distribuire un singolo array su più righe e colonne in base alle specifiche del progetto stesso.
+Il codice di accesso al teatro è tutto inserito all'interno di accessTeatro dove sono richiamati i moduli get e set (presenti in teatro.service.ts) che ricevono la chiave inserita in input dall'utente e, se corretta, aprono la prenotazione del posto a teatro. Il codice invece di inserimento del nome è tutta presente in add_nome che con un semplice EventEmitter rimanda il codice htmtl richiamato poi in AppComponent. Proprio in questo ultimo componente sono presenti le funzioni e il codice HTML per la costruzione del teatro (con un costrutture, due array con due *ngFor), la prenotazione del posto (con due funzioni per la platea e i palchi che rimandano ad una sola funzione di prenotazione) e la conclusione della prenotazione (una funzione che rimanda alla schermata principale di accesso del teatro). 
 
 (da rivedere https://stackblitz.com/edit/ssw-teatro-politeama?file=README.md)
 
