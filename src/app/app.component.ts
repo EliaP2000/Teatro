@@ -65,7 +65,7 @@ export class AppComponent {
     }
   }
 
-  public selezionaPostoPalchi(counter1: any, counter2: any,) {
+  public selezionaPostoPalchi(counter1: any, counter2: any) {
     this.righe = counter1.toString();
     this.colonne = counter2.toString();
     var sum = this.righe+this.colonne;
@@ -98,8 +98,4 @@ export class AppComponent {
     this.home='';
     this.nominativo='';
   }
-
- /* cambiocolore(posto: string): string {
-    return posto !== '' ? "rgb(213, 30, 30)" : "rgb(62, 174, 62)";
-  }*/
 }
