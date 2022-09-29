@@ -28,12 +28,13 @@ export class AppComponent {
 
   public selezionaPostoPlatea(counter1: any, counter2: any) {
     if(counter1>=1){
-      this.righe = '0' + ((counter1).toString());
+      this.righe = '0' + (counter1.toString());
     }else{
       this.righe = counter1.toString();
     }
     this.colonne = counter2.toString();
     var PostoSelezionato_Array = this.righe+this.colonne;
+    console.log(PostoSelezionato_Array)
     var PostoScelto_HTML = counter1+((counter2+1).toString());
     const teatroIntero = this.bottoni.concat(this.bottoni1);
     return this.result = this.selezionaPosto(PostoSelezionato_Array, PostoScelto_HTML, teatroIntero, this.bottoni);
@@ -41,7 +42,7 @@ export class AppComponent {
 
   public selezionaPostoPalchi(counter1: any, counter2: any) {
     if(counter1>=1){
-      this.righe = '0' + ((counter1).toString());
+      this.righe = '0' + (counter1.toString());
     }else{
       this.righe = counter1.toString();
     }
@@ -53,6 +54,7 @@ export class AppComponent {
       sum = sum-8;
     else if(sum>=30&&sum<=35)
       sum = sum-12;
+    sum = '0' + (sum.toString());
     var sum_HTML = counter1+((counter2+1).toString());
     const teatroIntero = this.bottoni.concat(this.bottoni1);
     return this.result = this.selezionaPosto(sum, sum_HTML, teatroIntero, this.bottoni1);
